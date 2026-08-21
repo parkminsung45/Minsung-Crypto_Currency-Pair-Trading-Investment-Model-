@@ -4,6 +4,8 @@
 
 전체 아키텍처, 전략 설계, 로드맵은 [DESIGN.md](DESIGN.md)를 참고한다.
 
+**대시보드**: [upbit-spread-rl-dashboard.vercel.app](https://upbit-spread-rl-dashboard.vercel.app) — 포트폴리오 가치, 누적수익률, 종목 비중을 확인한다. 아직 실행 이력이 없어 현재는 "기록 없음" 상태.
+
 ## 전략
 
 1. **페어 스프레드**: 상관관계 높은 두 코인(예: BTC/ETH) 로그가격 비율의 평균회귀를 노리는 통계적 차익거래.
@@ -18,6 +20,7 @@
 - [x] Gym 환경: `PairSpreadEnv`, `QuoteSpreadEnv`
 - [x] PPO 학습 래퍼(`agents/train.py`)
 - [x] 실행 계층: `PaperBroker`, `LiveBroker`, `RiskGuard`
+- [x] 대시보드 골격 배포(Vercel, `dashboard/`) — `dashboard/data/history.json`을 GitHub raw로 fetch
 - [ ] 대량 과거 데이터 수집 및 백테스트/워크포워드 검증
 - [ ] 페이퍼 트레이딩 운영
 - [ ] 실거래 전환
