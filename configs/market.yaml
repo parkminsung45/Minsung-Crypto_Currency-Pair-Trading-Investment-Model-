@@ -1,0 +1,7 @@
+# 시장/데이터 설정
+pair_markets:
+  - KRW-BTC
+  - KRW-ETH
+quote_market: KRW-BTC
+candle_unit_minutes: 1
+fee_rate: 0.0005
