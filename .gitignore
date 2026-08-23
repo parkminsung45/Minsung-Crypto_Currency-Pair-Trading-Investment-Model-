@@ -19,6 +19,7 @@ models/*
 !models/.gitkeep
 logs/*
 !logs/.gitkeep
+!logs/paper_state.json
 
 # OS
 .DS_Store

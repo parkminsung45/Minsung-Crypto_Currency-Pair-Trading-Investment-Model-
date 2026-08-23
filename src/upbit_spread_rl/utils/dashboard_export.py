@@ -1,8 +1,8 @@
 """dashboard/index.html이 읽는 dashboard/data/history.json을 갱신한다.
 
-레코드 스키마 (한 실행 = 한 레코드):
+레코드 스키마 (한 실행 = 한 레코드, 1시간 단위 실행 기준):
     {
-        "date": "YYYY-MM-DD",
+        "date": "YYYY-MM-DDTHH:MM",        # 실행 시각(UTC), 기존 일단위 "YYYY-MM-DD"도 호환
         "portfolio_value": float,          # KRW 평가액
         "daily_return_pct": float | null,  # 직전 기록 대비 %, 첫 기록은 null
         "weights": {"BTC": float, "ETH": float, "CASH": float},  # 합 1.0
@@ -34,7 +34,7 @@ def append_record(
     actions: dict[str, str] | None = None,
     dry_run: bool = True,
 ) -> list[dict]:
-    """새 실행 결과를 history.json에 append하고 저장한다. 같은 date가 이미 있으면 덮어쓴다."""
+    """새 실행 결과를 history.json에 append하고 저장한다. 같은 date(시각)가 이미 있으면 덮어쓴다."""
     history = load_history()
     history = [h for h in history if h["date"] != date]
 
