@@ -17,8 +17,10 @@ UPBIT_REST_BASE = "https://api.upbit.com/v1"
 MAX_CANDLES_PER_REQUEST = 200
 
 
-def _is_rate_limited(exc: BaseException) -> bool:
-    return isinstance(exc, httpx.HTTPStatusError) and exc.response.status_code == 429
+def _is_retryable(exc: BaseException) -> bool:
+    if isinstance(exc, httpx.HTTPStatusError):
+        return exc.response.status_code == 429
+    return isinstance(exc, httpx.TransportError)
 
 
 @dataclass
@@ -31,7 +33,7 @@ class CandleFetcher:
             self.rate_limiter = TokenBucketLimiter(rate_per_sec=3.0, burst=3)
 
     @retry(
-        retry=retry_if_exception(_is_rate_limited),
+        retry=retry_if_exception(_is_retryable),
         wait=wait_exponential(multiplier=1, min=1, max=30),
         stop=stop_after_attempt(6),
         reraise=True,
