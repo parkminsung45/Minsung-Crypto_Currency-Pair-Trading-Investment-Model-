@@ -433,5 +433,20 @@
       "KRW-ETH": "HOLD"
     },
     "dry_run": true
+  },
+  {
+    "date": "2026-08-27T06:25",
+    "portfolio_value": 998579.0138569842,
+    "daily_return_pct": 0.00018219807598196525,
+    "weights": {
+      "BTC": 0.09934149794249432,
+      "ETH": -0.10046407925800381,
+      "CASH": 1.0011225813155096
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
   }
 ]
