@@ -50,6 +50,7 @@ def main(market_a: str, market_b: str, days: int, timesteps: int) -> None:
         env_factory,
         total_timesteps=timesteps,
         model_out_path=f"models/pair_spread_{market_a}_{market_b}.zip",
+        tensorboard_log=None,
     )
 
 

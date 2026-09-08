@@ -17,6 +17,8 @@ data/processed/*
 !data/processed/.gitkeep
 models/*
 !models/.gitkeep
+!models/pair_spread_KRW-BTC_KRW-ETH.zip
+!models/pair_spread_KRW-XRP_KRW-SOL.zip
 logs/*
 !logs/.gitkeep
 

@@ -22,7 +22,9 @@
     --neg:            #e34948;   /* 다이버징 - (red) */
     --s-btc:          #eb6834;   /* slot 1 orange (BTC 관례색) */
     --s-eth:          #2a78d6;   /* slot 2 blue */
-    --s-cash:         #008300;   /* slot 3 green (KRW 현금) */
+    --s-xrp:          #7a5cd6;   /* slot 3 purple */
+    --s-sol:          #c2276b;   /* slot 4 magenta */
+    --s-cash:         #008300;   /* slot 5 green (KRW 현금) */
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -41,6 +43,8 @@
       --neg:            #e66767;
       --s-btc:          #d95926;
       --s-eth:          #3987e5;
+      --s-xrp:          #9884e0;
+      --s-sol:          #e0508f;
       --s-cash:         #008300;
     }
   }
@@ -143,7 +147,7 @@
     <div class="sub">
       <span id="status-badge" class="badge">불러오는 중…</span>
       <span id="last-updated"></span>
-      <a href="https://github.com/parkminsung45/Minsung-RL-based-Crypto_Currency-Investment-Model-" target="_blank" rel="noopener">GitHub 저장소</a>
+      <a href="https://github.com/parkminsung45/Minsung-Crypto_Currency-Pair-Trading-Investment-Model-" target="_blank" rel="noopener">GitHub 저장소</a>
     </div>
   </header>
 
@@ -160,13 +164,15 @@
 <script>
 "use strict";
 
-const DATA_URL = "https://raw.githubusercontent.com/parkminsung45/Minsung-RL-based-Crypto_Currency-Investment-Model-/main/dashboard/data/history.json";
+const DATA_URL = "https://raw.githubusercontent.com/parkminsung45/Minsung-Crypto_Currency-Pair-Trading-Investment-Model-/main/dashboard/data/history.json";
 const REFRESH_MS = 60_000;
 
 /* 색은 엔티티를 따른다 — 코인별 고정 슬롯, 필터로 재배색되지 않음 */
 const SERIES = [
   { key: "BTC",  label: "BTC",  cssVar: "--s-btc"  },
   { key: "ETH",  label: "ETH",  cssVar: "--s-eth"  },
+  { key: "XRP",  label: "XRP",  cssVar: "--s-xrp"  },
+  { key: "SOL",  label: "SOL",  cssVar: "--s-sol"  },
   { key: "CASH", label: "현금(KRW)", cssVar: "--s-cash" },
 ];
 
@@ -427,7 +433,23 @@ function returnsChart(history) {
   return svg;
 }
 
-/* ---------- 3) 목표 비중 추이 (100% 스택 컬럼, 3슬롯 고정) ---------- */
+/* ---------- 3) 목표 비중 추이 (100% 스택 컬럼, N슬롯 고정) ---------- */
+/* weights는 정상적으로는 절대값 합이 1.0(전량 배분)이지만, 페어 트레이딩의 숏
+   다리는 음수로 기록될 수 있어 그대로 스택하면 100%를 넘거나 세그먼트가
+   빠지면서 막대가 플롯 밖으로 삐져나온다. 절대값 기준으로 폭을 정규화해
+   항상 정확히 100%로 채우고, 숏(음수) 세그먼트는 빗금으로 구분한다. */
+
+let weightsHatchDefsAdded = false;
+function ensureHatchPattern(svg) {
+  const defs = svgEl("defs", {});
+  const pattern = svgEl("pattern", {
+    id: "short-hatch", width: 6, height: 6, patternUnits: "userSpaceOnUse", patternTransform: "rotate(45)",
+  });
+  pattern.appendChild(svgEl("rect", { width: 6, height: 6, fill: cssColor("--surface") }));
+  pattern.appendChild(svgEl("line", { x1: 0, y1: 0, x2: 0, y2: 6, stroke: cssColor("--text-primary"), "stroke-width": 2, opacity: 0.35 }));
+  defs.appendChild(pattern);
+  svg.appendChild(defs);
+}
 
 function weightsChart(history) {
   const width = 1040, height = 240;
@@ -439,29 +461,33 @@ function weightsChart(history) {
 
   const ticks = [0, 0.25, 0.5, 0.75, 1].map(f => ({ value: (1 - f) * 100, y: y(f) }));
   const svg = chartFrame(width, height, ticks, v => v + "%", pickXLabels(history, xs));
+  ensureHatchPattern(svg);
 
   history.forEach((h, i) => {
+    const total = SERIES.reduce((sum, s) => sum + Math.abs(h.weights[s.key] ?? 0), 0) || 1;
     let acc = 0;
     const x0 = xs[i] - barW / 2;
     for (const s of SERIES) {
-      const w = h.weights[s.key] ?? 0;
-      if (w <= 0) continue;
+      const raw = h.weights[s.key] ?? 0;
+      const frac = Math.abs(raw) / total;
+      if (frac <= 0) continue;
       const segTop = y(acc);
-      const segH = Math.max(plotH * w - 2, 1);   // 세그먼트 사이 2px 서피스 갭
-      const color = cssColor(s.cssVar);
+      const segH = Math.max(plotH * frac - 2, 1);   // 세그먼트 사이 2px 서피스 갭
+      const color = raw < 0 ? "url(#short-hatch)" : cssColor(s.cssVar);
       const rect = svgEl("rect", { x: x0, y: segTop, width: barW, height: segH, fill: color, rx: 2 });
+      if (raw < 0) rect.appendChild(svgEl("title", {})).textContent = s.label + " 숏";
       rect.addEventListener("pointermove", (e) => {
         rect.setAttribute("opacity", "0.8");
         showTooltip(e.clientX, e.clientY, h.date,
-          SERIES.filter(t => (h.weights[t.key] ?? 0) > 0).map(t => ({
-            color: cssColor(t.cssVar),
+          SERIES.filter(t => (h.weights[t.key] ?? 0) !== 0).map(t => ({
+            color: (h.weights[t.key] ?? 0) < 0 ? cssColor("--text-muted") : cssColor(t.cssVar),
             value: ((h.weights[t.key] ?? 0) * 100).toFixed(1) + "%",
             name: t.label + (t.key === s.key ? " ◀" : ""),
           })));
       });
       rect.addEventListener("pointerleave", () => { rect.removeAttribute("opacity"); hideTooltip(); });
       svg.appendChild(rect);
-      acc += w;
+      acc += frac;
     }
   });
   return svg;
@@ -489,14 +515,16 @@ function weightsDonut(latest) {
   const circumference = 2 * Math.PI * r;
   const gapDeg = 3;   // 세그먼트 사이 서피스 갭(각도 기준) - 등근 컷 없이 딱 떨어지게
 
+  const total = SERIES.reduce((sum, s) => sum + Math.abs(latest.weights[s.key] ?? 0), 0) || 1;
   const slices = SERIES
-    .map(s => ({ ...s, weight: latest.weights[s.key] ?? 0 }))
+    .map(s => ({ ...s, raw: latest.weights[s.key] ?? 0, weight: Math.abs(latest.weights[s.key] ?? 0) / total }))
     .filter(s => s.weight > 0.0005);
 
   const svg = svgEl("svg", {
     viewBox: `0 0 ${size} ${size}`, role: "img",
     style: `width:${size}px; height:${size}px; flex: none;`,
   });
+  ensureHatchPattern(svg);
   const ring = svgEl("g", { transform: `rotate(-90 ${cx} ${cy})` });
 
   let angleAcc = 0;
@@ -505,7 +533,7 @@ function weightsDonut(latest) {
     const drawDeg = Math.max(sweepDeg - gapDeg, sweepDeg * 0.35);   // 아주 작은 조각은 갭을 줄임
     const dash = (drawDeg / 360) * circumference;
     const offset = -((angleAcc / 360) * circumference);
-    const color = cssColor(s.cssVar);
+    const color = s.raw < 0 ? "url(#short-hatch)" : cssColor(s.cssVar);
 
     const seg = svgEl("circle", {
       cx, cy, r, fill: "none", stroke: color, "stroke-width": stroke,
@@ -515,7 +543,7 @@ function weightsDonut(latest) {
     seg.addEventListener("pointermove", (e) => {
       seg.setAttribute("stroke-width", stroke + 3);
       showTooltip(e.clientX, e.clientY, latest.date, [
-        { color, value: (s.weight * 100).toFixed(1) + "%", name: s.label },
+        { color: s.raw < 0 ? cssColor("--text-muted") : color, value: (s.raw * 100).toFixed(1) + "%", name: s.label + (s.raw < 0 ? " (숏)" : "") },
       ]);
     });
     seg.addEventListener("pointerleave", () => { seg.setAttribute("stroke-width", stroke); hideTooltip(); });
@@ -538,16 +566,16 @@ function weightsDonut(latest) {
 function weightsDonutLegend(latest) {
   const rows = SERIES
     .map(s => ({ ...s, weight: latest.weights[s.key] ?? 0 }))
-    .filter(s => s.weight > 0.0005)
-    .sort((a, b) => b.weight - a.weight);
+    .filter(s => Math.abs(s.weight) > 0.0005)
+    .sort((a, b) => Math.abs(b.weight) - Math.abs(a.weight));
 
   const list = el("div", { class: "donut-legend" });
   for (const r of rows) {
     const swatch = el("span", { class: "swatch" });
-    swatch.style.background = cssColor(r.cssVar);
+    swatch.style.background = r.weight < 0 ? cssColor("--text-muted") : cssColor(r.cssVar);
     const row = el("div", { class: "donut-legend-row" }, [
       swatch,
-      el("span", { class: "donut-legend-name", text: r.label }),
+      el("span", { class: "donut-legend-name", text: r.label + (r.weight < 0 ? " (숏)" : "") }),
       el("span", { class: "donut-legend-pct", text: (r.weight * 100).toFixed(1) + "%" }),
     ]);
     list.appendChild(row);

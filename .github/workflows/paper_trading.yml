@@ -1,0 +1,39 @@
+name: 페이퍼 트레이딩 (1시간 주기)
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paper-trading
+  cancel-in-progress: false
+
+jobs:
+  paper-trade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: 의존성 설치
+        run: pip install -e .
+
+      - name: 페이퍼 트레이딩 1회 실행
+        run: python scripts/run_paper_trading_once.py
+
+      - name: 기록 커밋 + push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dashboard/data/history.json dashboard/data/paper_state_*.json
+          git diff --cached --quiet && exit 0
+          git commit -m "페이퍼 트레이딩 자동 기록 갱신"
+          git push origin main

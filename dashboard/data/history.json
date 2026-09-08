@@ -1,1 +1,4893 @@
-[]
+[
+  {
+    "date": "2026-08-23T05:22",
+    "portfolio_value": 1000000.0,
+    "daily_return_pct": null,
+    "weights": {
+      "BTC": 0.0,
+      "ETH": 0.0,
+      "CASH": 1.0
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-23T05:23",
+    "portfolio_value": 1000000.0,
+    "daily_return_pct": 0.0,
+    "weights": {
+      "BTC": 0.0,
+      "ETH": 0.0,
+      "CASH": 1.0
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-23T05:24",
+    "portfolio_value": 1000000.0,
+    "daily_return_pct": 0.0,
+    "weights": {
+      "BTC": 0.0,
+      "ETH": 0.0,
+      "CASH": 1.0
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-23T16:37",
+    "portfolio_value": 1000000.0,
+    "daily_return_pct": 0.0,
+    "weights": {
+      "BTC": 0.0,
+      "ETH": 0.0,
+      "CASH": 1.0
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-23T17:41",
+    "portfolio_value": 1000000.0,
+    "daily_return_pct": 0.0,
+    "weights": {
+      "BTC": 0.0,
+      "ETH": 0.0,
+      "CASH": 1.0
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-23T18:46",
+    "portfolio_value": 1000000.0,
+    "daily_return_pct": 0.0,
+    "weights": {
+      "BTC": 0.0,
+      "ETH": 0.0,
+      "CASH": 1.0
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-23T20:09",
+    "portfolio_value": 1000000.0,
+    "daily_return_pct": 0.0,
+    "weights": {
+      "BTC": 0.0,
+      "ETH": 0.0,
+      "CASH": 1.0
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-24T00:06",
+    "portfolio_value": 1000000.0,
+    "daily_return_pct": 0.0,
+    "weights": {
+      "BTC": 0.0,
+      "ETH": 0.0,
+      "CASH": 1.0
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-24T00:07",
+    "portfolio_value": 1000000.0,
+    "daily_return_pct": 0.0,
+    "weights": {
+      "BTC": 0.0,
+      "ETH": 0.0,
+      "CASH": 1.0
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-25T00:31",
+    "portfolio_value": 1000000.0,
+    "daily_return_pct": 0.0,
+    "weights": {
+      "BTC": 0.0,
+      "ETH": 0.0,
+      "CASH": 1.0
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-25T01:31",
+    "portfolio_value": 999900.0,
+    "daily_return_pct": -0.009999999999998899,
+    "weights": {
+      "BTC": 0.1000100010001,
+      "ETH": -0.1000100010001,
+      "CASH": 1.0
+    },
+    "actions": {
+      "KRW-BTC": "BUY",
+      "KRW-ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-25T02:32",
+    "portfolio_value": 1000324.0871945003,
+    "daily_return_pct": 0.04241296074609657,
+    "weights": {
+      "BTC": 0.10108839225282143,
+      "ETH": -0.10066444245502182,
+      "CASH": 0.9995760502022003
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-25T05:17",
+    "portfolio_value": 1000647.4886237687,
+    "daily_return_pct": 0.032329665296315646,
+    "weights": {
+      "BTC": 0.10071132362542679,
+      "ETH": -0.09996431867886278,
+      "CASH": 0.9992529950534361
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-25T06:18",
+    "portfolio_value": 1000670.0510412633,
+    "daily_return_pct": 0.002254781803889827,
+    "weights": {
+      "BTC": 0.10113795002239141,
+      "ETH": -0.10036841460913308,
+      "CASH": 0.9992304645867417
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-25T07:23",
+    "portfolio_value": 1000704.5512150503,
+    "daily_return_pct": 0.0034477072388794383,
+    "weights": {
+      "BTC": 0.10113991509684049,
+      "ETH": -0.10033593033023439,
+      "CASH": 0.999196015233394
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-25T14:46",
+    "portfolio_value": 1000012.170857609,
+    "daily_return_pct": -0.06918928834694915,
+    "weights": {
+      "BTC": 0.09979146749197632,
+      "ETH": -0.09967929799956611,
+      "CASH": 0.9998878305075899
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-25T16:09",
+    "portfolio_value": 1000081.4571260931,
+    "daily_return_pct": 0.006928542522111059,
+    "weights": {
+      "BTC": 4.9097622820851995e-05,
+      "ETH": 0.0002323365784510308,
+      "CASH": 0.9997185657987281
+    },
+    "actions": {
+      "KRW-BTC": "SELL",
+      "KRW-ETH": "BUY"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-26T00:35",
+    "portfolio_value": 1000078.7638353893,
+    "daily_return_pct": -0.0002693071333936814,
+    "weights": {
+      "BTC": 4.877201332705378e-05,
+      "ETH": 0.00022996986728260942,
+      "CASH": 0.9997212581193903
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-26T01:36",
+    "portfolio_value": 1000080.4052464422,
+    "daily_return_pct": 0.00016412817791522372,
+    "weights": {
+      "BTC": 4.899281257383726e-05,
+      "ETH": 0.00023138988962805108,
+      "CASH": 0.9997196172977981
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-26T02:36",
+    "portfolio_value": 1000080.879384856,
+    "daily_return_pct": 4.7410029369032713e-05,
+    "weights": {
+      "BTC": 4.9061061096147804e-05,
+      "ETH": 0.00023179560824516376,
+      "CASH": 0.9997191433306587
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-26T04:06",
+    "portfolio_value": 1000081.104628261,
+    "daily_return_pct": 2.2522518894341204e-05,
+    "weights": {
+      "BTC": 4.9083361070687026e-05,
+      "ETH": 0.00023199847015280213,
+      "CASH": 0.9997189181687764
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-26T06:00",
+    "portfolio_value": 999980.8941113263,
+    "daily_return_pct": -0.01002023900570359,
+    "weights": {
+      "BTC": 0.10005099131869677,
+      "ETH": -0.0997700918405363,
+      "CASH": 0.9997191005218395
+    },
+    "actions": {
+      "KRW-BTC": "BUY",
+      "KRW-ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-26T07:00",
+    "portfolio_value": 999952.7088671142,
+    "daily_return_pct": -0.0028185782726564135,
+    "weights": {
+      "BTC": 0.09982182841743698,
+      "ETH": -0.09956910759886893,
+      "CASH": 0.999747279181432
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-26T08:01",
+    "portfolio_value": 999812.607228141,
+    "daily_return_pct": -0.014010826485166827,
+    "weights": {
+      "BTC": 0.0998121597577067,
+      "ETH": -0.09969953142383012,
+      "CASH": 0.9998873716661233
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-26T23:05",
+    "portfolio_value": 998411.579926596,
+    "daily_return_pct": -0.14012898931422546,
+    "weights": {
+      "BTC": 0.09986110764659382,
+      "ETH": -0.10115157752826186,
+      "CASH": 1.001290469881668
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-27T01:32",
+    "portfolio_value": 998215.1121639233,
+    "daily_return_pct": -0.01967803325029216,
+    "weights": {
+      "BTC": 0.09933396972230911,
+      "ETH": -0.1008215126556732,
+      "CASH": 1.001487542933364
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-27T02:33",
+    "portfolio_value": 998324.2841994951,
+    "daily_return_pct": 0.01093672438350346,
+    "weights": {
+      "BTC": 0.0993158172585212,
+      "ETH": -0.10069384223725635,
+      "CASH": 1.0013780249787352
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-27T03:33",
+    "portfolio_value": 998542.6020822913,
+    "daily_return_pct": 0.02186843355926893,
+    "weights": {
+      "BTC": 0.099629359267149,
+      "ETH": -0.10078844643608428,
+      "CASH": 1.001159087168935
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-27T05:13",
+    "portfolio_value": 998577.1944685488,
+    "daily_return_pct": 0.003464287471088845,
+    "weights": {
+      "BTC": 0.09933985696003253,
+      "ETH": -0.10046426230162327,
+      "CASH": 1.0011244053415909
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-27T06:25",
+    "portfolio_value": 998579.0138569842,
+    "daily_return_pct": 0.00018219807598196525,
+    "weights": {
+      "BTC": 0.09934149794249432,
+      "ETH": -0.10046407925800381,
+      "CASH": 1.0011225813155096
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-27T07:37",
+    "portfolio_value": 998500.8377887595,
+    "daily_return_pct": -0.00782873134121953,
+    "weights": {
+      "BTC": -0.0006623844501567434,
+      "ETH": -0.0004384280575970638,
+      "CASH": 1.0011008125077538
+    },
+    "actions": {
+      "KRW-BTC": "SELL",
+      "KRW-ETH": "BUY"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-27T08:37",
+    "portfolio_value": 998488.7869733538,
+    "daily_return_pct": -0.00120689086574588,
+    "weights": {
+      "BTC": -0.0006684886387115051,
+      "ETH": -0.00044440620912604103,
+      "CASH": 1.0011128948478376
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-27T15:35",
+    "portfolio_value": 998385.3531712812,
+    "daily_return_pct": -0.010359034915774501,
+    "weights": {
+      "BTC": 0.09948731375204471,
+      "ETH": -0.10060376325240881,
+      "CASH": 1.001116449500364
+    },
+    "actions": {
+      "KRW-BTC": "BUY",
+      "KRW-ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-27T19:48",
+    "portfolio_value": 998151.4365854528,
+    "daily_return_pct": -0.023429488932846798,
+    "weights": {
+      "BTC": 0.09890015589603315,
+      "ETH": -0.10025121683239814,
+      "CASH": 1.001351060936365
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-27T23:05",
+    "portfolio_value": 998247.7302055543,
+    "daily_return_pct": 0.009647195462747504,
+    "weights": {
+      "BTC": 0.09927637576574555,
+      "ETH": -0.1005308437265071,
+      "CASH": 1.0012544679607616
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T01:05",
+    "portfolio_value": 998614.1679582115,
+    "daily_return_pct": 0.03670809775664363,
+    "weights": {
+      "BTC": 0.09995392243017705,
+      "ETH": -0.10084098379002118,
+      "CASH": 1.000887061359844
+    },
+    "actions": {
+      "KRW-BTC": "HOLD",
+      "KRW-ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T02:05:00Z",
+    "portfolio_value": 998638.35,
+    "daily_return_pct": 0.002421177599276625,
+    "weights": {
+      "BTC": 0.0126,
+      "ETH": 0.0,
+      "CASH": 0.9874
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T03:05:00Z",
+    "portfolio_value": 999222.32,
+    "daily_return_pct": 0.05847638473881478,
+    "weights": {
+      "BTC": 0.0351,
+      "ETH": -0.0484,
+      "CASH": 0.9165
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T04:05:00Z",
+    "portfolio_value": 1001785.17,
+    "daily_return_pct": 0.2564848170250489,
+    "weights": {
+      "BTC": 0.0412,
+      "ETH": 0.0,
+      "CASH": 0.9588
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T05:05:00Z",
+    "portfolio_value": 1001409.2,
+    "daily_return_pct": -0.03752997475505726,
+    "weights": {
+      "BTC": 0.0879,
+      "ETH": -0.0755,
+      "CASH": 0.8366
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T06:05:00Z",
+    "portfolio_value": 1001214.98,
+    "daily_return_pct": -0.019394664608574086,
+    "weights": {
+      "BTC": 0.0082,
+      "ETH": 0.0,
+      "CASH": 0.9918
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T07:05:00Z",
+    "portfolio_value": 1000530.92,
+    "daily_return_pct": -0.06832329202399734,
+    "weights": {
+      "BTC": 0.0903,
+      "ETH": -0.0275,
+      "CASH": 0.8822
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T08:05:00Z",
+    "portfolio_value": 1001313.68,
+    "daily_return_pct": 0.07823403751139324,
+    "weights": {
+      "BTC": 0.0265,
+      "ETH": 0.0,
+      "CASH": 0.9735
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T09:05:00Z",
+    "portfolio_value": 1002822.85,
+    "daily_return_pct": 0.15071850492518468,
+    "weights": {
+      "BTC": 0.0118,
+      "ETH": 0.0,
+      "CASH": 0.9882
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T10:05:00Z",
+    "portfolio_value": 1003218.96,
+    "daily_return_pct": 0.03949982120243778,
+    "weights": {
+      "BTC": 0.0762,
+      "ETH": -0.0974,
+      "CASH": 0.8264
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T11:05:00Z",
+    "portfolio_value": 1002595.26,
+    "daily_return_pct": -0.06217026370439749,
+    "weights": {
+      "BTC": 0.0751,
+      "ETH": 0.0,
+      "CASH": 0.9249
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T12:05:00Z",
+    "portfolio_value": 1001667.52,
+    "daily_return_pct": -0.09253394967041473,
+    "weights": {
+      "BTC": 0.0347,
+      "ETH": -0.0161,
+      "CASH": 0.9492
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T13:05:00Z",
+    "portfolio_value": 1003086.84,
+    "daily_return_pct": 0.14169570160200706,
+    "weights": {
+      "BTC": 0.0226,
+      "ETH": -0.0038,
+      "CASH": 0.9736
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T14:05:00Z",
+    "portfolio_value": 1002198.43,
+    "daily_return_pct": -0.08856772747773967,
+    "weights": {
+      "BTC": 0.0297,
+      "ETH": -0.0702,
+      "CASH": 0.9001
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T15:05:00Z",
+    "portfolio_value": 1004140.68,
+    "daily_return_pct": 0.19379852696217448,
+    "weights": {
+      "BTC": 0.0876,
+      "ETH": 0.0,
+      "CASH": 0.9124
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T16:05:00Z",
+    "portfolio_value": 1003118.06,
+    "daily_return_pct": -0.10184044649653723,
+    "weights": {
+      "BTC": 0.0587,
+      "ETH": -0.0325,
+      "CASH": 0.9088
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T17:05:00Z",
+    "portfolio_value": 1002748.8,
+    "daily_return_pct": -0.036811263711111764,
+    "weights": {
+      "BTC": 0.043,
+      "ETH": -0.0814,
+      "CASH": 0.8756
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T18:05:00Z",
+    "portfolio_value": 1003096.51,
+    "daily_return_pct": 0.03467593530124269,
+    "weights": {
+      "BTC": 0.0612,
+      "ETH": -0.0252,
+      "CASH": 0.9136
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T19:05:00Z",
+    "portfolio_value": 1004336.51,
+    "daily_return_pct": 0.12361692088955767,
+    "weights": {
+      "BTC": 0.0121,
+      "ETH": 0.0,
+      "CASH": 0.9879
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T20:05:00Z",
+    "portfolio_value": 1003052.8,
+    "daily_return_pct": -0.12781654408522414,
+    "weights": {
+      "BTC": 0.0126,
+      "ETH": 0.0,
+      "CASH": 0.9874
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T21:05:00Z",
+    "portfolio_value": 1002486.02,
+    "daily_return_pct": -0.05650508670292931,
+    "weights": {
+      "BTC": 0.0939,
+      "ETH": -0.0133,
+      "CASH": 0.8928
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T22:05:00Z",
+    "portfolio_value": 1002675.76,
+    "daily_return_pct": 0.018926656342532766,
+    "weights": {
+      "BTC": 0.0429,
+      "ETH": 0.0,
+      "CASH": 0.9571
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-28T23:05:00Z",
+    "portfolio_value": 1002721.91,
+    "daily_return_pct": 0.004602608491022231,
+    "weights": {
+      "BTC": 0.0099,
+      "ETH": 0.0,
+      "CASH": 0.9901
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T00:05:00Z",
+    "portfolio_value": 1002735.12,
+    "daily_return_pct": 0.0013177868674274507,
+    "weights": {
+      "BTC": 0.0871,
+      "ETH": 0.0,
+      "CASH": 0.9129
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T01:05:00Z",
+    "portfolio_value": 1001535.53,
+    "daily_return_pct": -0.11963142968662854,
+    "weights": {
+      "BTC": 0.0209,
+      "ETH": -0.0001,
+      "CASH": 0.979
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T02:05:00Z",
+    "portfolio_value": 1002449.68,
+    "daily_return_pct": 0.09127477198782596,
+    "weights": {
+      "BTC": 0.0374,
+      "ETH": -0.0445,
+      "CASH": 0.9181
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T03:05:00Z",
+    "portfolio_value": 1002797.45,
+    "daily_return_pct": 0.034692037185202196,
+    "weights": {
+      "BTC": 0.0378,
+      "ETH": -0.0353,
+      "CASH": 0.9269000000000001
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T04:05:00Z",
+    "portfolio_value": 1003915.65,
+    "daily_return_pct": 0.11150800107349035,
+    "weights": {
+      "BTC": 0.0346,
+      "ETH": -0.0949,
+      "CASH": 0.8705
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T05:05:00Z",
+    "portfolio_value": 1004260.94,
+    "daily_return_pct": 0.034393999908766126,
+    "weights": {
+      "BTC": 0.0918,
+      "ETH": 0.0,
+      "CASH": 0.9082
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T06:05:00Z",
+    "portfolio_value": 1004440.13,
+    "daily_return_pct": 0.017843447115595268,
+    "weights": {
+      "BTC": 0.0565,
+      "ETH": -0.0204,
+      "CASH": 0.9231
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T07:05:00Z",
+    "portfolio_value": 1004981.92,
+    "daily_return_pct": 0.053939714225959,
+    "weights": {
+      "BTC": 0.0184,
+      "ETH": 0.0,
+      "CASH": 0.9816
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T08:05:00Z",
+    "portfolio_value": 1005635.66,
+    "daily_return_pct": 0.06504948979986214,
+    "weights": {
+      "BTC": 0.0116,
+      "ETH": -0.0845,
+      "CASH": 0.9039
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T09:05:00Z",
+    "portfolio_value": 1005476.42,
+    "daily_return_pct": -0.015834285677973625,
+    "weights": {
+      "BTC": 0.0068,
+      "ETH": -0.0626,
+      "CASH": 0.9306
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T10:05:00Z",
+    "portfolio_value": 1005700.68,
+    "daily_return_pct": 0.022304345395407488,
+    "weights": {
+      "BTC": 0.0115,
+      "ETH": -0.0044,
+      "CASH": 0.9841
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T11:05:00Z",
+    "portfolio_value": 1006123.24,
+    "daily_return_pct": 0.04201652606545814,
+    "weights": {
+      "BTC": 0.0281,
+      "ETH": 0.0,
+      "CASH": 0.9719
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T12:05:00Z",
+    "portfolio_value": 1006340.85,
+    "daily_return_pct": 0.021629029809511202,
+    "weights": {
+      "BTC": 0.0608,
+      "ETH": 0.0,
+      "CASH": 0.9392
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T13:05:00Z",
+    "portfolio_value": 1006413.02,
+    "daily_return_pct": 0.007171364668479008,
+    "weights": {
+      "BTC": 0.0322,
+      "ETH": -0.0019,
+      "CASH": 0.9659
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T14:05:00Z",
+    "portfolio_value": 1006205.43,
+    "daily_return_pct": -0.02062699944863633,
+    "weights": {
+      "BTC": 0.0415,
+      "ETH": -0.0544,
+      "CASH": 0.9041
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T15:05:00Z",
+    "portfolio_value": 1006553.22,
+    "daily_return_pct": 0.03456440345410705,
+    "weights": {
+      "BTC": 0.0617,
+      "ETH": 0.0,
+      "CASH": 0.9383
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T16:05:00Z",
+    "portfolio_value": 1006081.79,
+    "daily_return_pct": -0.04683559089263545,
+    "weights": {
+      "BTC": 0.0594,
+      "ETH": 0.0,
+      "CASH": 0.9406
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T17:05:00Z",
+    "portfolio_value": 1006597.11,
+    "daily_return_pct": 0.05122097926757441,
+    "weights": {
+      "BTC": 0.0458,
+      "ETH": -0.085,
+      "CASH": 0.8692
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T18:05:00Z",
+    "portfolio_value": 1007141.1,
+    "daily_return_pct": 0.05404253570528983,
+    "weights": {
+      "BTC": 0.0702,
+      "ETH": -0.0884,
+      "CASH": 0.8413999999999999
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T19:05:00Z",
+    "portfolio_value": 1007038.41,
+    "daily_return_pct": -0.010196173332199798,
+    "weights": {
+      "BTC": 0.0262,
+      "ETH": -0.097,
+      "CASH": 0.8768
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T20:05:00Z",
+    "portfolio_value": 1006471.01,
+    "daily_return_pct": -0.05634339101475705,
+    "weights": {
+      "BTC": 0.0982,
+      "ETH": 0.0,
+      "CASH": 0.9018
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T21:05:00Z",
+    "portfolio_value": 1005786.91,
+    "daily_return_pct": -0.06797058267883349,
+    "weights": {
+      "BTC": 0.0185,
+      "ETH": -0.0175,
+      "CASH": 0.964
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T22:05:00Z",
+    "portfolio_value": 1007227.05,
+    "daily_return_pct": 0.1431850988699246,
+    "weights": {
+      "BTC": 0.0359,
+      "ETH": 0.0,
+      "CASH": 0.9641
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-29T23:05:00Z",
+    "portfolio_value": 1007423.18,
+    "daily_return_pct": 0.019472680509236007,
+    "weights": {
+      "BTC": 0.054,
+      "ETH": 0.0,
+      "CASH": 0.946
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T00:05:00Z",
+    "portfolio_value": 1007529.55,
+    "daily_return_pct": 0.010558952481409811,
+    "weights": {
+      "BTC": 0.0319,
+      "ETH": 0.0,
+      "CASH": 0.9681
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T01:05:00Z",
+    "portfolio_value": 1008202.9,
+    "daily_return_pct": 0.06683166343295355,
+    "weights": {
+      "BTC": 0.0304,
+      "ETH": 0.0,
+      "CASH": 0.9696
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T02:05:00Z",
+    "portfolio_value": 1006484.99,
+    "daily_return_pct": -0.17039301437122845,
+    "weights": {
+      "BTC": 0.0276,
+      "ETH": 0.0,
+      "CASH": 0.9724
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T03:05:00Z",
+    "portfolio_value": 1007292.25,
+    "daily_return_pct": 0.08020579762832991,
+    "weights": {
+      "BTC": 0.0225,
+      "ETH": 0.0,
+      "CASH": 0.9775
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T04:05:00Z",
+    "portfolio_value": 1005884.77,
+    "daily_return_pct": -0.13972937793257367,
+    "weights": {
+      "BTC": 0.0599,
+      "ETH": -0.0269,
+      "CASH": 0.9132
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T05:05:00Z",
+    "portfolio_value": 1006084.67,
+    "daily_return_pct": 0.01987329143058325,
+    "weights": {
+      "BTC": 0.0171,
+      "ETH": 0.0,
+      "CASH": 0.9829
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T06:05:00Z",
+    "portfolio_value": 1007083.85,
+    "daily_return_pct": 0.09931377119398732,
+    "weights": {
+      "BTC": 0.0517,
+      "ETH": 0.0,
+      "CASH": 0.9483
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T07:05:00Z",
+    "portfolio_value": 1007189.87,
+    "daily_return_pct": 0.010527808709204223,
+    "weights": {
+      "BTC": 0.0151,
+      "ETH": 0.0,
+      "CASH": 0.9849
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T08:05:00Z",
+    "portfolio_value": 1008468.93,
+    "daily_return_pct": 0.1269931852928563,
+    "weights": {
+      "BTC": 0.0137,
+      "ETH": 0.0,
+      "CASH": 0.9863
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T09:05:00Z",
+    "portfolio_value": 1008306.43,
+    "daily_return_pct": -0.016113076941859372,
+    "weights": {
+      "BTC": 0.0222,
+      "ETH": 0.0,
+      "CASH": 0.9778
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T10:05:00Z",
+    "portfolio_value": 1009268.78,
+    "daily_return_pct": 0.09544246702730685,
+    "weights": {
+      "BTC": 0.0456,
+      "ETH": -0.0911,
+      "CASH": 0.8633
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T11:05:00Z",
+    "portfolio_value": 1010068.14,
+    "daily_return_pct": 0.0792023085200988,
+    "weights": {
+      "BTC": 0.0116,
+      "ETH": -0.0493,
+      "CASH": 0.9391
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T12:05:00Z",
+    "portfolio_value": 1009163.85,
+    "daily_return_pct": -0.08952761435684353,
+    "weights": {
+      "BTC": 0.056,
+      "ETH": -0.0026,
+      "CASH": 0.9414
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T13:05:00Z",
+    "portfolio_value": 1009957.61,
+    "daily_return_pct": 0.07865482963032022,
+    "weights": {
+      "BTC": 0.0924,
+      "ETH": 0.0,
+      "CASH": 0.9076
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T14:05:00Z",
+    "portfolio_value": 1010358.2,
+    "daily_return_pct": 0.03966401910451278,
+    "weights": {
+      "BTC": 0.038,
+      "ETH": -0.0462,
+      "CASH": 0.9158
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T15:05:00Z",
+    "portfolio_value": 1010338.28,
+    "daily_return_pct": -0.0019712386304826524,
+    "weights": {
+      "BTC": 0.0164,
+      "ETH": -0.0253,
+      "CASH": 0.9583
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T16:05:00Z",
+    "portfolio_value": 1009057.79,
+    "daily_return_pct": -0.12673827268464555,
+    "weights": {
+      "BTC": 0.0182,
+      "ETH": 0.0,
+      "CASH": 0.9818
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T17:05:00Z",
+    "portfolio_value": 1008441.86,
+    "daily_return_pct": -0.06104052540008009,
+    "weights": {
+      "BTC": 0.0772,
+      "ETH": -0.0083,
+      "CASH": 0.9145
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T18:05:00Z",
+    "portfolio_value": 1006979.68,
+    "daily_return_pct": -0.14499387545914288,
+    "weights": {
+      "BTC": 0.0052,
+      "ETH": 0.0,
+      "CASH": 0.9948
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T19:05:00Z",
+    "portfolio_value": 1006724.9,
+    "daily_return_pct": -0.02530170220196304,
+    "weights": {
+      "BTC": 0.0929,
+      "ETH": 0.0,
+      "CASH": 0.9071
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T20:05:00Z",
+    "portfolio_value": 1005589.39,
+    "daily_return_pct": -0.1127923276065701,
+    "weights": {
+      "BTC": 0.0296,
+      "ETH": 0.0,
+      "CASH": 0.9704
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T21:05:00Z",
+    "portfolio_value": 1004185.47,
+    "daily_return_pct": -0.13961139328206862,
+    "weights": {
+      "BTC": 0.0786,
+      "ETH": -0.0692,
+      "CASH": 0.8522000000000001
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T22:05:00Z",
+    "portfolio_value": 1005447.33,
+    "daily_return_pct": 0.12565956739709616,
+    "weights": {
+      "BTC": 0.0363,
+      "ETH": -0.0737,
+      "CASH": 0.89
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-30T23:05:00Z",
+    "portfolio_value": 1005817.95,
+    "daily_return_pct": 0.03686147712422816,
+    "weights": {
+      "BTC": 0.0336,
+      "ETH": 0.0,
+      "CASH": 0.9664
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T00:05:00Z",
+    "portfolio_value": 1006166.34,
+    "daily_return_pct": 0.034637805589432524,
+    "weights": {
+      "BTC": 0.0453,
+      "ETH": -0.0026,
+      "CASH": 0.9521
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T01:05:00Z",
+    "portfolio_value": 1006337.72,
+    "daily_return_pct": 0.01703345944821244,
+    "weights": {
+      "BTC": 0.0403,
+      "ETH": -0.054,
+      "CASH": 0.9057
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T02:05:00Z",
+    "portfolio_value": 1006735.78,
+    "daily_return_pct": 0.03955545966531915,
+    "weights": {
+      "BTC": 0.0996,
+      "ETH": -0.0086,
+      "CASH": 0.8918
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T03:05:00Z",
+    "portfolio_value": 1006385.8,
+    "daily_return_pct": -0.034763697261741555,
+    "weights": {
+      "BTC": 0.0586,
+      "ETH": 0.0,
+      "CASH": 0.9414
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T04:05:00Z",
+    "portfolio_value": 1005641.46,
+    "daily_return_pct": -0.0739612101819942,
+    "weights": {
+      "BTC": 0.0721,
+      "ETH": 0.0,
+      "CASH": 0.9279
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T05:05:00Z",
+    "portfolio_value": 1004716.45,
+    "daily_return_pct": -0.09198177823680487,
+    "weights": {
+      "BTC": 0.0099,
+      "ETH": -0.0747,
+      "CASH": 0.9154
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T06:05:00Z",
+    "portfolio_value": 1005575.05,
+    "daily_return_pct": 0.08545662292389622,
+    "weights": {
+      "BTC": 0.0592,
+      "ETH": 0.0,
+      "CASH": 0.9408
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T07:05:00Z",
+    "portfolio_value": 1003885.35,
+    "daily_return_pct": -0.16803361850917797,
+    "weights": {
+      "BTC": 0.0567,
+      "ETH": 0.0,
+      "CASH": 0.9433
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T08:05:00Z",
+    "portfolio_value": 1004084.67,
+    "daily_return_pct": 0.01985497173035977,
+    "weights": {
+      "BTC": 0.015,
+      "ETH": 0.0,
+      "CASH": 0.985
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T09:05:00Z",
+    "portfolio_value": 1002360.25,
+    "daily_return_pct": -0.17174012274076,
+    "weights": {
+      "BTC": 0.0675,
+      "ETH": -0.0759,
+      "CASH": 0.8566
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T10:05:00Z",
+    "portfolio_value": 1003096.36,
+    "daily_return_pct": 0.07343725509292298,
+    "weights": {
+      "BTC": 0.0628,
+      "ETH": -0.0625,
+      "CASH": 0.8747
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T11:05:00Z",
+    "portfolio_value": 1002919.38,
+    "daily_return_pct": -0.017643823470891995,
+    "weights": {
+      "BTC": 0.0636,
+      "ETH": 0.0,
+      "CASH": 0.9364
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T12:05:00Z",
+    "portfolio_value": 1005479.97,
+    "daily_return_pct": 0.2553132416722059,
+    "weights": {
+      "BTC": 0.0624,
+      "ETH": -0.0443,
+      "CASH": 0.8933
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T13:05:00Z",
+    "portfolio_value": 1003978.44,
+    "daily_return_pct": -0.14933435431560005,
+    "weights": {
+      "BTC": 0.0863,
+      "ETH": -0.0884,
+      "CASH": 0.8252999999999999
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T14:05:00Z",
+    "portfolio_value": 1004320.97,
+    "daily_return_pct": 0.03411758614670912,
+    "weights": {
+      "BTC": 0.0158,
+      "ETH": 0.0,
+      "CASH": 0.9842
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T15:05:00Z",
+    "portfolio_value": 1006111.44,
+    "daily_return_pct": 0.17827703536630324,
+    "weights": {
+      "BTC": 0.0949,
+      "ETH": 0.0,
+      "CASH": 0.9051
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T16:05:00Z",
+    "portfolio_value": 1006047.23,
+    "daily_return_pct": -0.006381683691858431,
+    "weights": {
+      "BTC": 0.017,
+      "ETH": 0.0,
+      "CASH": 0.983
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T17:05:00Z",
+    "portfolio_value": 1005471.87,
+    "daily_return_pct": -0.05718971925228189,
+    "weights": {
+      "BTC": 0.0654,
+      "ETH": 0.0,
+      "CASH": 0.9346
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T18:05:00Z",
+    "portfolio_value": 1004976.72,
+    "daily_return_pct": -0.04924542018976963,
+    "weights": {
+      "BTC": 0.0729,
+      "ETH": 0.0,
+      "CASH": 0.9271
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T19:05:00Z",
+    "portfolio_value": 1004882.07,
+    "daily_return_pct": -0.009417846631598614,
+    "weights": {
+      "BTC": 0.0411,
+      "ETH": -0.006,
+      "CASH": 0.9529
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T20:05:00Z",
+    "portfolio_value": 1006578.6,
+    "daily_return_pct": 0.16882902906223407,
+    "weights": {
+      "BTC": 0.0699,
+      "ETH": 0.0,
+      "CASH": 0.9301
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T21:05:00Z",
+    "portfolio_value": 1006598.1,
+    "daily_return_pct": 0.0019372570277509382,
+    "weights": {
+      "BTC": 0.0054,
+      "ETH": 0.0,
+      "CASH": 0.9946
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T22:05:00Z",
+    "portfolio_value": 1004820.57,
+    "daily_return_pct": -0.1765880359724803,
+    "weights": {
+      "BTC": 0.0941,
+      "ETH": -0.0238,
+      "CASH": 0.8821
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-08-31T23:05:00Z",
+    "portfolio_value": 1002797.64,
+    "daily_return_pct": -0.2013223448669832,
+    "weights": {
+      "BTC": 0.0041,
+      "ETH": 0.0,
+      "CASH": 0.9959
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T00:05:00Z",
+    "portfolio_value": 1003755.6,
+    "daily_return_pct": 0.09552850804759316,
+    "weights": {
+      "BTC": 0.0195,
+      "ETH": -0.0468,
+      "CASH": 0.9337
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T01:05:00Z",
+    "portfolio_value": 1004431.54,
+    "daily_return_pct": 0.06734136703157034,
+    "weights": {
+      "BTC": 0.0257,
+      "ETH": -0.0452,
+      "CASH": 0.9291
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T02:05:00Z",
+    "portfolio_value": 1004024.98,
+    "daily_return_pct": -0.04047687601443917,
+    "weights": {
+      "BTC": 0.0072,
+      "ETH": 0.0,
+      "CASH": 0.9928
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T03:05:00Z",
+    "portfolio_value": 1006554.68,
+    "daily_return_pct": 0.25195603826173585,
+    "weights": {
+      "BTC": 0.0227,
+      "ETH": 0.0,
+      "CASH": 0.9773
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T04:05:00Z",
+    "portfolio_value": 1006456.49,
+    "daily_return_pct": -0.009754822712415567,
+    "weights": {
+      "BTC": 0.0427,
+      "ETH": 0.0,
+      "CASH": 0.9573
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T05:05:00Z",
+    "portfolio_value": 1005677.14,
+    "daily_return_pct": -0.07743467291009276,
+    "weights": {
+      "BTC": 0.0127,
+      "ETH": -0.0973,
+      "CASH": 0.89
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T06:05:00Z",
+    "portfolio_value": 1004341.45,
+    "daily_return_pct": -0.1328147937799007,
+    "weights": {
+      "BTC": 0.0837,
+      "ETH": -0.0347,
+      "CASH": 0.8815999999999999
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T07:05:00Z",
+    "portfolio_value": 1003988.6,
+    "daily_return_pct": -0.035131987473357995,
+    "weights": {
+      "BTC": 0.0544,
+      "ETH": -0.0162,
+      "CASH": 0.9294
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T08:05:00Z",
+    "portfolio_value": 1003158.51,
+    "daily_return_pct": -0.08267887752082537,
+    "weights": {
+      "BTC": 0.0001,
+      "ETH": -0.0916,
+      "CASH": 0.9083
+    },
+    "actions": {
+      "BTC": "HOLD",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T09:05:00Z",
+    "portfolio_value": 1001829.5,
+    "daily_return_pct": -0.13248212155109185,
+    "weights": {
+      "BTC": 0.051,
+      "ETH": 0.0,
+      "CASH": 0.949
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T10:05:00Z",
+    "portfolio_value": 1002219.58,
+    "daily_return_pct": 0.038937171140784876,
+    "weights": {
+      "BTC": 0.0463,
+      "ETH": 0.0,
+      "CASH": 0.9537
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T11:05:00Z",
+    "portfolio_value": 1002756.6,
+    "daily_return_pct": 0.053582858363454555,
+    "weights": {
+      "BTC": 0.061,
+      "ETH": -0.0299,
+      "CASH": 0.9091
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T12:05:00Z",
+    "portfolio_value": 1003334.45,
+    "daily_return_pct": 0.05762657219170464,
+    "weights": {
+      "BTC": 0.0112,
+      "ETH": -0.0437,
+      "CASH": 0.9451
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T13:05:00Z",
+    "portfolio_value": 1002603.66,
+    "daily_return_pct": -0.07283577737103863,
+    "weights": {
+      "BTC": 0.0959,
+      "ETH": -0.0417,
+      "CASH": 0.8624
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T14:05:00Z",
+    "portfolio_value": 1001375.08,
+    "daily_return_pct": -0.1225393227082261,
+    "weights": {
+      "BTC": 0.0574,
+      "ETH": 0.0,
+      "CASH": 0.9426
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T15:05:00Z",
+    "portfolio_value": 1000866.5,
+    "daily_return_pct": -0.050787696963716655,
+    "weights": {
+      "BTC": 0.0322,
+      "ETH": -0.0756,
+      "CASH": 0.8922
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T16:05:00Z",
+    "portfolio_value": 1000040.75,
+    "daily_return_pct": -0.08250360041048843,
+    "weights": {
+      "BTC": 0.0586,
+      "ETH": -0.0883,
+      "CASH": 0.8531
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T17:05:00Z",
+    "portfolio_value": 998926.56,
+    "daily_return_pct": -0.11141476050710031,
+    "weights": {
+      "BTC": 0.0076,
+      "ETH": -0.0075,
+      "CASH": 0.9849
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T18:05:00Z",
+    "portfolio_value": 999998.54,
+    "daily_return_pct": 0.1073135900200084,
+    "weights": {
+      "BTC": 0.0382,
+      "ETH": 0.0,
+      "CASH": 0.9618
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T19:05:00Z",
+    "portfolio_value": 998119.93,
+    "daily_return_pct": -0.1878615303104625,
+    "weights": {
+      "BTC": 0.0225,
+      "ETH": -0.0457,
+      "CASH": 0.9318
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T20:05:00Z",
+    "portfolio_value": 997880.49,
+    "daily_return_pct": -0.023989256796286273,
+    "weights": {
+      "BTC": 0.0919,
+      "ETH": 0.0,
+      "CASH": 0.9081
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T21:05:00Z",
+    "portfolio_value": 997642.67,
+    "daily_return_pct": -0.02383210436358585,
+    "weights": {
+      "BTC": 0.0796,
+      "ETH": -0.0664,
+      "CASH": 0.854
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T22:05:00Z",
+    "portfolio_value": 998992.91,
+    "daily_return_pct": 0.13534308678668783,
+    "weights": {
+      "BTC": 0.0613,
+      "ETH": -0.0177,
+      "CASH": 0.921
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-01T23:05:00Z",
+    "portfolio_value": 998084.64,
+    "daily_return_pct": -0.09091824250857528,
+    "weights": {
+      "BTC": 0.0593,
+      "ETH": 0.0,
+      "CASH": 0.9407
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T00:05:00Z",
+    "portfolio_value": 998894.22,
+    "daily_return_pct": 0.0811130581870545,
+    "weights": {
+      "BTC": 0.0709,
+      "ETH": 0.0,
+      "CASH": 0.9291
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T01:05:00Z",
+    "portfolio_value": 997289.76,
+    "daily_return_pct": -0.16062399432736907,
+    "weights": {
+      "BTC": 0.0441,
+      "ETH": 0.0,
+      "CASH": 0.9559
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T02:05:00Z",
+    "portfolio_value": 996495.49,
+    "daily_return_pct": -0.07964331212565456,
+    "weights": {
+      "BTC": 0.0087,
+      "ETH": -0.0418,
+      "CASH": 0.9495
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T03:05:00Z",
+    "portfolio_value": 996857.76,
+    "daily_return_pct": 0.03635467374758505,
+    "weights": {
+      "BTC": 0.0117,
+      "ETH": -0.0044,
+      "CASH": 0.9839
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T04:05:00Z",
+    "portfolio_value": 996712.33,
+    "daily_return_pct": -0.014589188376223916,
+    "weights": {
+      "BTC": 0.0751,
+      "ETH": -0.0811,
+      "CASH": 0.8438
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T05:05:00Z",
+    "portfolio_value": 998304.98,
+    "daily_return_pct": 0.15978989169214142,
+    "weights": {
+      "BTC": 0.0812,
+      "ETH": -0.0051,
+      "CASH": 0.9137
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T06:05:00Z",
+    "portfolio_value": 998359.51,
+    "daily_return_pct": 0.005462093649466482,
+    "weights": {
+      "BTC": 0.0233,
+      "ETH": 0.0,
+      "CASH": 0.9767
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T07:05:00Z",
+    "portfolio_value": 996916.56,
+    "daily_return_pct": -0.14453189752698936,
+    "weights": {
+      "BTC": 0.0681,
+      "ETH": 0.0,
+      "CASH": 0.9319
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T08:05:00Z",
+    "portfolio_value": 997000.9,
+    "daily_return_pct": 0.008459770554347656,
+    "weights": {
+      "BTC": 0.095,
+      "ETH": -0.0184,
+      "CASH": 0.8866
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T09:05:00Z",
+    "portfolio_value": 999239.89,
+    "daily_return_pct": 0.22457258528489898,
+    "weights": {
+      "BTC": 0.0114,
+      "ETH": -0.083,
+      "CASH": 0.9056
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T10:05:00Z",
+    "portfolio_value": 999898.76,
+    "daily_return_pct": 0.06593756344359658,
+    "weights": {
+      "BTC": 0.0402,
+      "ETH": 0.0,
+      "CASH": 0.9598
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T11:05:00Z",
+    "portfolio_value": 999838.76,
+    "daily_return_pct": -0.00600068115190755,
+    "weights": {
+      "BTC": 0.0618,
+      "ETH": -0.0246,
+      "CASH": 0.9136
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T12:05:00Z",
+    "portfolio_value": 999436.16,
+    "daily_return_pct": -0.040266739759986514,
+    "weights": {
+      "BTC": 0.0196,
+      "ETH": -0.0709,
+      "CASH": 0.9095
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T13:05:00Z",
+    "portfolio_value": 998606.3,
+    "daily_return_pct": -0.0830329583108691,
+    "weights": {
+      "BTC": 0.0074,
+      "ETH": 0.0,
+      "CASH": 0.9926
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T14:05:00Z",
+    "portfolio_value": 998741.16,
+    "daily_return_pct": 0.013504920376994356,
+    "weights": {
+      "BTC": 0.0927,
+      "ETH": 0.0,
+      "CASH": 0.9073
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T15:05:00Z",
+    "portfolio_value": 996273.02,
+    "daily_return_pct": -0.24712475212489426,
+    "weights": {
+      "BTC": 0.0705,
+      "ETH": 0.0,
+      "CASH": 0.9295
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T16:05:00Z",
+    "portfolio_value": 995945.96,
+    "daily_return_pct": -0.03282800171681144,
+    "weights": {
+      "BTC": 0.0774,
+      "ETH": 0.0,
+      "CASH": 0.9226
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T17:05:00Z",
+    "portfolio_value": 996799.2,
+    "daily_return_pct": 0.0856710808791128,
+    "weights": {
+      "BTC": 0.0563,
+      "ETH": -0.0879,
+      "CASH": 0.8558
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T18:05:00Z",
+    "portfolio_value": 997185.36,
+    "daily_return_pct": 0.038739964169365315,
+    "weights": {
+      "BTC": 0.0671,
+      "ETH": 0.0,
+      "CASH": 0.9329
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T19:05:00Z",
+    "portfolio_value": 997977.86,
+    "daily_return_pct": 0.07947375449963712,
+    "weights": {
+      "BTC": 0.0962,
+      "ETH": 0.0,
+      "CASH": 0.9038
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T20:05:00Z",
+    "portfolio_value": 998750.31,
+    "daily_return_pct": 0.07740122651267445,
+    "weights": {
+      "BTC": 0.0359,
+      "ETH": 0.0,
+      "CASH": 0.9641
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T21:05:00Z",
+    "portfolio_value": 999512.93,
+    "daily_return_pct": 0.07635737520659269,
+    "weights": {
+      "BTC": 0.0573,
+      "ETH": 0.0,
+      "CASH": 0.9427
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T22:05:00Z",
+    "portfolio_value": 998988.91,
+    "daily_return_pct": -0.052427654787956524,
+    "weights": {
+      "BTC": 0.0303,
+      "ETH": -0.0619,
+      "CASH": 0.9077999999999999
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-02T23:05:00Z",
+    "portfolio_value": 998888.7,
+    "daily_return_pct": -0.010031096364315761,
+    "weights": {
+      "BTC": 0.0687,
+      "ETH": -0.0005,
+      "CASH": 0.9308
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T00:05:00Z",
+    "portfolio_value": 998402.13,
+    "daily_return_pct": -0.04871113100821667,
+    "weights": {
+      "BTC": 0.0219,
+      "ETH": 0.0,
+      "CASH": 0.9781
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T01:05:00Z",
+    "portfolio_value": 999269.48,
+    "daily_return_pct": 0.08687402658138499,
+    "weights": {
+      "BTC": 0.0739,
+      "ETH": -0.0864,
+      "CASH": 0.8397
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T02:05:00Z",
+    "portfolio_value": 999569.63,
+    "daily_return_pct": 0.03003650104607125,
+    "weights": {
+      "BTC": 0.0672,
+      "ETH": -0.0088,
+      "CASH": 0.924
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T03:05:00Z",
+    "portfolio_value": 998305.62,
+    "daily_return_pct": -0.1264555158930758,
+    "weights": {
+      "BTC": 0.0109,
+      "ETH": 0.0,
+      "CASH": 0.9891
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T04:05:00Z",
+    "portfolio_value": 999758.15,
+    "daily_return_pct": 0.14549909637255887,
+    "weights": {
+      "BTC": 0.0926,
+      "ETH": 0.0,
+      "CASH": 0.9074
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T05:05:00Z",
+    "portfolio_value": 1000476.85,
+    "daily_return_pct": 0.0718874425213123,
+    "weights": {
+      "BTC": 0.068,
+      "ETH": 0.0,
+      "CASH": 0.9319999999999999
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T06:05:00Z",
+    "portfolio_value": 1001675.39,
+    "daily_return_pct": 0.11979649459736841,
+    "weights": {
+      "BTC": 0.0471,
+      "ETH": 0.0,
+      "CASH": 0.9529
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T07:05:00Z",
+    "portfolio_value": 1002016.68,
+    "daily_return_pct": 0.03407229259277944,
+    "weights": {
+      "BTC": 0.0259,
+      "ETH": 0.0,
+      "CASH": 0.9741
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T08:05:00Z",
+    "portfolio_value": 1002097.93,
+    "daily_return_pct": 0.008109109863729813,
+    "weights": {
+      "BTC": 0.0926,
+      "ETH": 0.0,
+      "CASH": 0.9074
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T09:05:00Z",
+    "portfolio_value": 1002560.71,
+    "daily_return_pct": 0.04618082594134432,
+    "weights": {
+      "BTC": 0.0865,
+      "ETH": 0.0,
+      "CASH": 0.9135
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T10:05:00Z",
+    "portfolio_value": 1002202.67,
+    "daily_return_pct": -0.03571234250936417,
+    "weights": {
+      "BTC": 0.0559,
+      "ETH": 0.0,
+      "CASH": 0.9441
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T11:05:00Z",
+    "portfolio_value": 1003907.26,
+    "daily_return_pct": 0.17008443019868036,
+    "weights": {
+      "BTC": 0.07,
+      "ETH": 0.0,
+      "CASH": 0.9299999999999999
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T12:05:00Z",
+    "portfolio_value": 1006223.34,
+    "daily_return_pct": 0.23070703093570621,
+    "weights": {
+      "BTC": 0.0935,
+      "ETH": -0.0808,
+      "CASH": 0.8257
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T13:05:00Z",
+    "portfolio_value": 1004813.54,
+    "daily_return_pct": -0.14010761007098305,
+    "weights": {
+      "BTC": 0.0523,
+      "ETH": 0.0,
+      "CASH": 0.9477
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T14:05:00Z",
+    "portfolio_value": 1004907.67,
+    "daily_return_pct": 0.009367996029019388,
+    "weights": {
+      "BTC": 0.0151,
+      "ETH": 0.0,
+      "CASH": 0.9849
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T15:05:00Z",
+    "portfolio_value": 1006016.73,
+    "daily_return_pct": 0.11036479202186644,
+    "weights": {
+      "BTC": 0.0427,
+      "ETH": -0.0101,
+      "CASH": 0.9472
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T16:05:00Z",
+    "portfolio_value": 1004289.24,
+    "daily_return_pct": -0.17171628172572007,
+    "weights": {
+      "BTC": 0.0371,
+      "ETH": 0.0,
+      "CASH": 0.9629
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T17:05:00Z",
+    "portfolio_value": 1005046.87,
+    "daily_return_pct": 0.07543950223634077,
+    "weights": {
+      "BTC": 0.0883,
+      "ETH": -0.0132,
+      "CASH": 0.8985
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T18:05:00Z",
+    "portfolio_value": 1004549.07,
+    "daily_return_pct": -0.049530147604448516,
+    "weights": {
+      "BTC": 0.0488,
+      "ETH": -0.0558,
+      "CASH": 0.8954
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T19:05:00Z",
+    "portfolio_value": 1005256.48,
+    "daily_return_pct": 0.07042050589005644,
+    "weights": {
+      "BTC": 0.092,
+      "ETH": -0.0405,
+      "CASH": 0.8674999999999999
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T20:05:00Z",
+    "portfolio_value": 1006183.52,
+    "daily_return_pct": 0.09221964208834255,
+    "weights": {
+      "BTC": 0.0652,
+      "ETH": 0.0,
+      "CASH": 0.9348
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T21:05:00Z",
+    "portfolio_value": 1007059.33,
+    "daily_return_pct": 0.08704227657316821,
+    "weights": {
+      "BTC": 0.0562,
+      "ETH": 0.0,
+      "CASH": 0.9438
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T22:05:00Z",
+    "portfolio_value": 1008022.18,
+    "daily_return_pct": 0.09560976641675989,
+    "weights": {
+      "BTC": 0.0877,
+      "ETH": -0.0673,
+      "CASH": 0.845
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-03T23:05:00Z",
+    "portfolio_value": 1006755.48,
+    "daily_return_pct": -0.12566189551300733,
+    "weights": {
+      "BTC": 0.0139,
+      "ETH": -0.071,
+      "CASH": 0.9151
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T00:05:00Z",
+    "portfolio_value": 1007587.85,
+    "daily_return_pct": 0.08267836436417486,
+    "weights": {
+      "BTC": 0.0345,
+      "ETH": 0.0,
+      "CASH": 0.9655
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T01:05:00Z",
+    "portfolio_value": 1007147.35,
+    "daily_return_pct": -0.04371782718745054,
+    "weights": {
+      "BTC": 0.0226,
+      "ETH": 0.0,
+      "CASH": 0.9774
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T02:05:00Z",
+    "portfolio_value": 1006917.05,
+    "daily_return_pct": -0.022866819675704253,
+    "weights": {
+      "BTC": 0.0837,
+      "ETH": 0.0,
+      "CASH": 0.9163
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T03:05:00Z",
+    "portfolio_value": 1007319.8,
+    "daily_return_pct": 0.03999828091081348,
+    "weights": {
+      "BTC": 0.0489,
+      "ETH": 0.0,
+      "CASH": 0.9511000000000001
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T04:05:00Z",
+    "portfolio_value": 1006960.03,
+    "daily_return_pct": -0.03571550621287445,
+    "weights": {
+      "BTC": 0.0608,
+      "ETH": -0.0737,
+      "CASH": 0.8654999999999999
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T05:05:00Z",
+    "portfolio_value": 1006564.02,
+    "daily_return_pct": -0.039327120186472,
+    "weights": {
+      "BTC": 0.0471,
+      "ETH": 0.0,
+      "CASH": 0.9529
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T06:05:00Z",
+    "portfolio_value": 1005736.27,
+    "daily_return_pct": -0.08223525751385186,
+    "weights": {
+      "BTC": 0.0289,
+      "ETH": 0.0,
+      "CASH": 0.9711
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T07:05:00Z",
+    "portfolio_value": 1005606.9,
+    "daily_return_pct": -0.01286312110745369,
+    "weights": {
+      "BTC": 0.0035,
+      "ETH": 0.0,
+      "CASH": 0.9965
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T08:05:00Z",
+    "portfolio_value": 1004953.78,
+    "daily_return_pct": -0.06494767284822567,
+    "weights": {
+      "BTC": 0.0016,
+      "ETH": 0.0,
+      "CASH": 0.9984
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T09:05:00Z",
+    "portfolio_value": 1004188.47,
+    "daily_return_pct": -0.07615365054243206,
+    "weights": {
+      "BTC": 0.0871,
+      "ETH": 0.0,
+      "CASH": 0.9129
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T10:05:00Z",
+    "portfolio_value": 1003978.14,
+    "daily_return_pct": -0.02094551644793441,
+    "weights": {
+      "BTC": 0.0241,
+      "ETH": 0.0,
+      "CASH": 0.9759
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T11:05:00Z",
+    "portfolio_value": 1004194.29,
+    "daily_return_pct": 0.021529362853422995,
+    "weights": {
+      "BTC": 0.0173,
+      "ETH": -0.0592,
+      "CASH": 0.9235
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T12:05:00Z",
+    "portfolio_value": 1003523.63,
+    "daily_return_pct": -0.06678538411557522,
+    "weights": {
+      "BTC": 0.0483,
+      "ETH": -0.086,
+      "CASH": 0.8657
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T13:05:00Z",
+    "portfolio_value": 1003556.56,
+    "daily_return_pct": 0.0032816765092702482,
+    "weights": {
+      "BTC": 0.0621,
+      "ETH": -0.0042,
+      "CASH": 0.9337
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T14:05:00Z",
+    "portfolio_value": 1004166.19,
+    "daily_return_pct": 0.060747421894524756,
+    "weights": {
+      "BTC": 0.0721,
+      "ETH": -0.0353,
+      "CASH": 0.8926000000000001
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T15:05:00Z",
+    "portfolio_value": 1006101.09,
+    "daily_return_pct": 0.1926868941287463,
+    "weights": {
+      "BTC": 0.0661,
+      "ETH": -0.0953,
+      "CASH": 0.8386
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T16:05:00Z",
+    "portfolio_value": 1004877.73,
+    "daily_return_pct": -0.12159436931802325,
+    "weights": {
+      "BTC": 0.0753,
+      "ETH": 0.0,
+      "CASH": 0.9247
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T17:05:00Z",
+    "portfolio_value": 1004669.85,
+    "daily_return_pct": -0.02068704294195811,
+    "weights": {
+      "BTC": 0.0405,
+      "ETH": 0.0,
+      "CASH": 0.9595
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T18:05:00Z",
+    "portfolio_value": 1004349.89,
+    "daily_return_pct": -0.031847337993728964,
+    "weights": {
+      "BTC": 0.0058,
+      "ETH": -0.0812,
+      "CASH": 0.913
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T19:05:00Z",
+    "portfolio_value": 1004431.12,
+    "daily_return_pct": 0.008088281853946278,
+    "weights": {
+      "BTC": 0.095,
+      "ETH": -0.0173,
+      "CASH": 0.8877
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T20:05:00Z",
+    "portfolio_value": 1004858.89,
+    "daily_return_pct": 0.042588710715052436,
+    "weights": {
+      "BTC": 0.0318,
+      "ETH": 0.0,
+      "CASH": 0.9682
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T21:05:00Z",
+    "portfolio_value": 1005075.3,
+    "daily_return_pct": 0.021536059839921684,
+    "weights": {
+      "BTC": 0.0083,
+      "ETH": 0.0,
+      "CASH": 0.9917
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T22:05:00Z",
+    "portfolio_value": 1003662.27,
+    "daily_return_pct": -0.1405891319607222,
+    "weights": {
+      "BTC": 0.0462,
+      "ETH": 0.0,
+      "CASH": 0.9538
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-04T23:05:00Z",
+    "portfolio_value": 1004651.67,
+    "daily_return_pct": 0.09857884838901931,
+    "weights": {
+      "BTC": 0.0855,
+      "ETH": 0.0,
+      "CASH": 0.9145
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T00:05:00Z",
+    "portfolio_value": 1004126.96,
+    "daily_return_pct": -0.05222807614307934,
+    "weights": {
+      "BTC": 0.0517,
+      "ETH": -0.0135,
+      "CASH": 0.9348
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T01:05:00Z",
+    "portfolio_value": 1005470.32,
+    "daily_return_pct": 0.13378428485759652,
+    "weights": {
+      "BTC": 0.0296,
+      "ETH": 0.0,
+      "CASH": 0.9704
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T02:05:00Z",
+    "portfolio_value": 1004782.3,
+    "daily_return_pct": -0.0684271923662827,
+    "weights": {
+      "BTC": 0.0118,
+      "ETH": 0.0,
+      "CASH": 0.9882
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T03:05:00Z",
+    "portfolio_value": 1004182.92,
+    "daily_return_pct": -0.05965287555036447,
+    "weights": {
+      "BTC": 0.0938,
+      "ETH": 0.0,
+      "CASH": 0.9062
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T04:05:00Z",
+    "portfolio_value": 1004944.33,
+    "daily_return_pct": 0.07582430480859159,
+    "weights": {
+      "BTC": 0.0048,
+      "ETH": 0.0,
+      "CASH": 0.9952
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T05:05:00Z",
+    "portfolio_value": 1004815.06,
+    "daily_return_pct": -0.012863884180669416,
+    "weights": {
+      "BTC": 0.047,
+      "ETH": 0.0,
+      "CASH": 0.953
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T06:05:00Z",
+    "portfolio_value": 1004454.46,
+    "daily_return_pct": -0.035886753434311025,
+    "weights": {
+      "BTC": 0.0173,
+      "ETH": -0.0939,
+      "CASH": 0.8888
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T07:05:00Z",
+    "portfolio_value": 1003140.44,
+    "daily_return_pct": -0.13081964599800378,
+    "weights": {
+      "BTC": 0.0678,
+      "ETH": 0.0,
+      "CASH": 0.9322
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T08:05:00Z",
+    "portfolio_value": 1004504.95,
+    "daily_return_pct": 0.13602339205271985,
+    "weights": {
+      "BTC": 0.0525,
+      "ETH": -0.0788,
+      "CASH": 0.8687
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T09:05:00Z",
+    "portfolio_value": 1004251.32,
+    "daily_return_pct": -0.025249252006898093,
+    "weights": {
+      "BTC": 0.008,
+      "ETH": -0.0747,
+      "CASH": 0.9173
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T10:05:00Z",
+    "portfolio_value": 1006122.47,
+    "daily_return_pct": 0.186322542105688,
+    "weights": {
+      "BTC": 0.0356,
+      "ETH": 0.0,
+      "CASH": 0.9644
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T11:05:00Z",
+    "portfolio_value": 1005731.94,
+    "daily_return_pct": -0.03881528890889996,
+    "weights": {
+      "BTC": 0.0917,
+      "ETH": -0.0043,
+      "CASH": 0.904
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T12:05:00Z",
+    "portfolio_value": 1006853.46,
+    "daily_return_pct": 0.11151330788077285,
+    "weights": {
+      "BTC": 0.0436,
+      "ETH": 0.0,
+      "CASH": 0.9564
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T13:05:00Z",
+    "portfolio_value": 1005329.75,
+    "daily_return_pct": -0.151333436884582,
+    "weights": {
+      "BTC": 0.0605,
+      "ETH": 0.0,
+      "CASH": 0.9395
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T14:05:00Z",
+    "portfolio_value": 1005588.1,
+    "daily_return_pct": 0.02569823216294065,
+    "weights": {
+      "BTC": 0.058,
+      "ETH": -0.0976,
+      "CASH": 0.8444
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T15:05:00Z",
+    "portfolio_value": 1004750.25,
+    "daily_return_pct": -0.08331953726732344,
+    "weights": {
+      "BTC": 0.0894,
+      "ETH": -0.0373,
+      "CASH": 0.8733
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T16:05:00Z",
+    "portfolio_value": 1004296.1,
+    "daily_return_pct": -0.045200386752475286,
+    "weights": {
+      "BTC": 0.0859,
+      "ETH": -0.0326,
+      "CASH": 0.8815
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T17:05:00Z",
+    "portfolio_value": 1004077.52,
+    "daily_return_pct": -0.021764754851394397,
+    "weights": {
+      "BTC": 0.0702,
+      "ETH": -0.0829,
+      "CASH": 0.8469
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T18:05:00Z",
+    "portfolio_value": 1002071.13,
+    "daily_return_pct": -0.19982450609645763,
+    "weights": {
+      "BTC": 0.0699,
+      "ETH": 0.0,
+      "CASH": 0.9301
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T19:05:00Z",
+    "portfolio_value": 1000866.45,
+    "daily_return_pct": -0.12021900754151105,
+    "weights": {
+      "BTC": 0.05,
+      "ETH": -0.0346,
+      "CASH": 0.9154
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T20:05:00Z",
+    "portfolio_value": 1000359.91,
+    "daily_return_pct": -0.0506101138819437,
+    "weights": {
+      "BTC": 0.0826,
+      "ETH": -0.0245,
+      "CASH": 0.8929
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T21:05:00Z",
+    "portfolio_value": 999455.03,
+    "daily_return_pct": -0.09045507944929199,
+    "weights": {
+      "BTC": 0.025,
+      "ETH": -0.0759,
+      "CASH": 0.8991
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T22:05:00Z",
+    "portfolio_value": 999842.99,
+    "daily_return_pct": 0.03881738476150254,
+    "weights": {
+      "BTC": 0.0751,
+      "ETH": -0.0559,
+      "CASH": 0.869
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-05T23:05:00Z",
+    "portfolio_value": 999696.36,
+    "daily_return_pct": -0.01466552273892141,
+    "weights": {
+      "BTC": 0.0709,
+      "ETH": 0.0,
+      "CASH": 0.9291
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T00:05:00Z",
+    "portfolio_value": 998238.49,
+    "daily_return_pct": -0.14583128734603212,
+    "weights": {
+      "BTC": 0.0962,
+      "ETH": -0.071,
+      "CASH": 0.8328
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T01:05:00Z",
+    "portfolio_value": 997351.85,
+    "daily_return_pct": -0.08882022801849354,
+    "weights": {
+      "BTC": 0.0751,
+      "ETH": 0.0,
+      "CASH": 0.9249
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T02:05:00Z",
+    "portfolio_value": 996404.81,
+    "daily_return_pct": -0.09495584140672975,
+    "weights": {
+      "BTC": 0.0644,
+      "ETH": 0.0,
+      "CASH": 0.9356
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T03:05:00Z",
+    "portfolio_value": 997323.36,
+    "daily_return_pct": 0.09218661179817289,
+    "weights": {
+      "BTC": 0.0127,
+      "ETH": -0.0761,
+      "CASH": 0.9112
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T04:05:00Z",
+    "portfolio_value": 998208.39,
+    "daily_return_pct": 0.08874043290323375,
+    "weights": {
+      "BTC": 0.0527,
+      "ETH": -0.0347,
+      "CASH": 0.9126
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T05:05:00Z",
+    "portfolio_value": 996529.26,
+    "daily_return_pct": -0.1682144393241991,
+    "weights": {
+      "BTC": 0.0767,
+      "ETH": -0.0287,
+      "CASH": 0.8946
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T06:05:00Z",
+    "portfolio_value": 997432.03,
+    "daily_return_pct": 0.0905914210992842,
+    "weights": {
+      "BTC": 0.0586,
+      "ETH": -0.0617,
+      "CASH": 0.8797
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T07:05:00Z",
+    "portfolio_value": 998242.45,
+    "daily_return_pct": 0.08125086016794736,
+    "weights": {
+      "BTC": 0.0753,
+      "ETH": -0.0182,
+      "CASH": 0.9065
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T08:05:00Z",
+    "portfolio_value": 998676.45,
+    "daily_return_pct": 0.04347649723572822,
+    "weights": {
+      "BTC": 0.0174,
+      "ETH": -0.0547,
+      "CASH": 0.9279
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T09:05:00Z",
+    "portfolio_value": 998189.53,
+    "daily_return_pct": -0.04875702756492739,
+    "weights": {
+      "BTC": 0.0453,
+      "ETH": 0.0,
+      "CASH": 0.9547
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T10:05:00Z",
+    "portfolio_value": 998100.58,
+    "daily_return_pct": -0.008911180445048128,
+    "weights": {
+      "BTC": 0.0273,
+      "ETH": 0.0,
+      "CASH": 0.9727
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T11:05:00Z",
+    "portfolio_value": 1000451.03,
+    "daily_return_pct": 0.23549248796768119,
+    "weights": {
+      "BTC": 0.0879,
+      "ETH": -0.0045,
+      "CASH": 0.9076
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T12:05:00Z",
+    "portfolio_value": 1000255.67,
+    "daily_return_pct": -0.019526694716209825,
+    "weights": {
+      "BTC": 0.0198,
+      "ETH": -0.094,
+      "CASH": 0.8862
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T13:05:00Z",
+    "portfolio_value": 1000091.04,
+    "daily_return_pct": -0.01645850228129131,
+    "weights": {
+      "BTC": 0.0326,
+      "ETH": -0.0453,
+      "CASH": 0.9221
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T14:05:00Z",
+    "portfolio_value": 998200.81,
+    "daily_return_pct": -0.18900587003050084,
+    "weights": {
+      "BTC": 0.0891,
+      "ETH": -0.0363,
+      "CASH": 0.8024,
+      "XRP": 0.0722,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T15:05:00Z",
+    "portfolio_value": 998392.56,
+    "daily_return_pct": 0.019209067547931724,
+    "weights": {
+      "BTC": 0.0743,
+      "ETH": -0.08,
+      "CASH": 0.7387,
+      "XRP": 0.0314,
+      "SOL": -0.0756
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T16:05:00Z",
+    "portfolio_value": 998978.45,
+    "daily_return_pct": 0.05868330468388194,
+    "weights": {
+      "BTC": 0.0868,
+      "ETH": 0.0,
+      "CASH": 0.8695999999999999,
+      "XRP": 0.0436,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T17:05:00Z",
+    "portfolio_value": 997986.35,
+    "daily_return_pct": -0.09931192649562659,
+    "weights": {
+      "BTC": 0.0462,
+      "ETH": -0.0282,
+      "CASH": 0.7857000000000001,
+      "XRP": 0.0699,
+      "SOL": -0.07
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T18:05:00Z",
+    "portfolio_value": 999741.11,
+    "daily_return_pct": 0.1758304612027084,
+    "weights": {
+      "BTC": 0.0841,
+      "ETH": -0.0124,
+      "CASH": 0.8524,
+      "XRP": 0.0277,
+      "SOL": -0.0234
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T19:05:00Z",
+    "portfolio_value": 1001846.09,
+    "daily_return_pct": 0.21055289712810232,
+    "weights": {
+      "BTC": 0.0926,
+      "ETH": 0.0,
+      "CASH": 0.9066,
+      "XRP": 0.0008,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T20:05:00Z",
+    "portfolio_value": 1002048.18,
+    "daily_return_pct": 0.020171677193570048,
+    "weights": {
+      "BTC": 0.0303,
+      "ETH": 0.0,
+      "CASH": 0.9017,
+      "XRP": 0.0542,
+      "SOL": -0.0138
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T21:05:00Z",
+    "portfolio_value": 1001035.4,
+    "daily_return_pct": -0.10107075848686531,
+    "weights": {
+      "BTC": 0.0997,
+      "ETH": -0.0511,
+      "CASH": 0.7512000000000001,
+      "XRP": 0.0349,
+      "SOL": -0.0631
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T22:05:00Z",
+    "portfolio_value": 1001193.69,
+    "daily_return_pct": 0.015812929047709368,
+    "weights": {
+      "BTC": 0.09,
+      "ETH": 0.0,
+      "CASH": 0.8522000000000001,
+      "XRP": 0.0426,
+      "SOL": -0.0152
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-06T23:05:00Z",
+    "portfolio_value": 1001763.86,
+    "daily_return_pct": 0.056948640858967,
+    "weights": {
+      "BTC": 0.039,
+      "ETH": 0.0,
+      "CASH": 0.9368,
+      "XRP": 0.0242,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T00:05:00Z",
+    "portfolio_value": 1004028.81,
+    "daily_return_pct": 0.22609578368757433,
+    "weights": {
+      "BTC": 0.0386,
+      "ETH": -0.0967,
+      "CASH": 0.7464999999999999,
+      "XRP": 0.0433,
+      "SOL": -0.0749
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T01:05:00Z",
+    "portfolio_value": 1004814.38,
+    "daily_return_pct": 0.07824187084388701,
+    "weights": {
+      "BTC": 0.0848,
+      "ETH": 0.0,
+      "CASH": 0.8654999999999999,
+      "XRP": 0.0497,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T02:05:00Z",
+    "portfolio_value": 1004178.17,
+    "daily_return_pct": -0.0633160981525216,
+    "weights": {
+      "BTC": 0.0855,
+      "ETH": 0.0,
+      "CASH": 0.8673,
+      "XRP": 0.0405,
+      "SOL": -0.0067
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T03:05:00Z",
+    "portfolio_value": 1005583.26,
+    "daily_return_pct": 0.13992466767205336,
+    "weights": {
+      "BTC": 0.0861,
+      "ETH": -0.0177,
+      "CASH": 0.8822,
+      "XRP": 0.014,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T04:05:00Z",
+    "portfolio_value": 1004789.21,
+    "daily_return_pct": -0.07896369223772126,
+    "weights": {
+      "BTC": 0.0529,
+      "ETH": 0.0,
+      "CASH": 0.8784,
+      "XRP": 0.0514,
+      "SOL": -0.0173
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T05:05:00Z",
+    "portfolio_value": 1005415.59,
+    "daily_return_pct": 0.06233904258339251,
+    "weights": {
+      "BTC": 0.0832,
+      "ETH": 0.0,
+      "CASH": 0.8477,
+      "XRP": 0.0691,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T06:05:00Z",
+    "portfolio_value": 1005399.8,
+    "daily_return_pct": -0.001570304330589245,
+    "weights": {
+      "BTC": 0.0152,
+      "ETH": -0.0604,
+      "CASH": 0.8669,
+      "XRP": 0.0129,
+      "SOL": -0.0446
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T07:05:00Z",
+    "portfolio_value": 1003583.88,
+    "daily_return_pct": -0.1806168105739303,
+    "weights": {
+      "BTC": 0.0065,
+      "ETH": 0.0,
+      "CASH": 0.9418,
+      "XRP": 0.0344,
+      "SOL": -0.0173
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T08:05:00Z",
+    "portfolio_value": 1003996.05,
+    "daily_return_pct": 0.041070141579258035,
+    "weights": {
+      "BTC": 0.07,
+      "ETH": -0.063,
+      "CASH": 0.8079000000000001,
+      "XRP": 0.0591,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T09:05:00Z",
+    "portfolio_value": 1004133.79,
+    "daily_return_pct": 0.013719349227558908,
+    "weights": {
+      "BTC": 0.0458,
+      "ETH": -0.0714,
+      "CASH": 0.8067,
+      "XRP": 0.0306,
+      "SOL": -0.0455
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T10:05:00Z",
+    "portfolio_value": 1004039.09,
+    "daily_return_pct": -0.00943145269375334,
+    "weights": {
+      "BTC": 0.0734,
+      "ETH": 0.0,
+      "CASH": 0.9051,
+      "XRP": 0.0215,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T11:05:00Z",
+    "portfolio_value": 1004619.01,
+    "daily_return_pct": 0.05775851092151285,
+    "weights": {
+      "BTC": 0.0579,
+      "ETH": -0.0377,
+      "CASH": 0.8304,
+      "XRP": 0.0675,
+      "SOL": -0.0065
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T12:05:00Z",
+    "portfolio_value": 1006243.66,
+    "daily_return_pct": 0.16171787821677164,
+    "weights": {
+      "BTC": 0.0182,
+      "ETH": -0.0685,
+      "CASH": 0.9066,
+      "XRP": 0.0067,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T13:05:00Z",
+    "portfolio_value": 1006996.86,
+    "daily_return_pct": 0.07485295437030803,
+    "weights": {
+      "BTC": 0.0008,
+      "ETH": -0.0736,
+      "CASH": 0.8646,
+      "XRP": 0.0209,
+      "SOL": -0.0401
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T14:05:00Z",
+    "portfolio_value": 1007655.77,
+    "daily_return_pct": 0.06543320274343678,
+    "weights": {
+      "BTC": 0.073,
+      "ETH": -0.0962,
+      "CASH": 0.7938000000000001,
+      "XRP": 0.037,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T15:05:00Z",
+    "portfolio_value": 1006215.06,
+    "daily_return_pct": -0.14297656278686732,
+    "weights": {
+      "BTC": 0.0936,
+      "ETH": -0.0103,
+      "CASH": 0.8567,
+      "XRP": 0.0394,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T16:05:00Z",
+    "portfolio_value": 1005598.69,
+    "daily_return_pct": -0.06125612060053909,
+    "weights": {
+      "BTC": 0.0904,
+      "ETH": -0.0767,
+      "CASH": 0.7611,
+      "XRP": 0.0481,
+      "SOL": -0.0237
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T17:05:00Z",
+    "portfolio_value": 1005740.96,
+    "daily_return_pct": 0.014148183325080055,
+    "weights": {
+      "BTC": 0.0565,
+      "ETH": 0.0,
+      "CASH": 0.8634999999999999,
+      "XRP": 0.0209,
+      "SOL": -0.0591
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T18:05:00Z",
+    "portfolio_value": 1005271.19,
+    "daily_return_pct": -0.04670852832180383,
+    "weights": {
+      "BTC": 0.0449,
+      "ETH": 0.0,
+      "CASH": 0.8369,
+      "XRP": 0.0589,
+      "SOL": -0.0593
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T19:05:00Z",
+    "portfolio_value": 1006282.13,
+    "daily_return_pct": 0.10056396674469337,
+    "weights": {
+      "BTC": 0.0215,
+      "ETH": -0.0303,
+      "CASH": 0.9097,
+      "XRP": 0.0385,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T20:05:00Z",
+    "portfolio_value": 1005017.06,
+    "daily_return_pct": -0.12571700777824768,
+    "weights": {
+      "BTC": 0.0505,
+      "ETH": -0.0622,
+      "CASH": 0.8739,
+      "XRP": 0.0134,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T21:05:00Z",
+    "portfolio_value": 1006171.7,
+    "daily_return_pct": 0.11488756645250398,
+    "weights": {
+      "BTC": 0.033,
+      "ETH": -0.0911,
+      "CASH": 0.7515000000000001,
+      "XRP": 0.0768,
+      "SOL": -0.0476
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T22:05:00Z",
+    "portfolio_value": 1004722.09,
+    "daily_return_pct": -0.14407190848652052,
+    "weights": {
+      "BTC": 0.0309,
+      "ETH": 0.0,
+      "CASH": 0.8762,
+      "XRP": 0.0678,
+      "SOL": -0.0251
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-07T23:05:00Z",
+    "portfolio_value": 1004429.41,
+    "daily_return_pct": -0.029130534403942754,
+    "weights": {
+      "BTC": 0.0651,
+      "ETH": 0.0,
+      "CASH": 0.9224,
+      "XRP": 0.0125,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T00:05:00Z",
+    "portfolio_value": 1005168.3,
+    "daily_return_pct": 0.07356352693279611,
+    "weights": {
+      "BTC": 0.007,
+      "ETH": 0.0,
+      "CASH": 0.8588,
+      "XRP": 0.0635,
+      "SOL": -0.0707
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T01:05:00Z",
+    "portfolio_value": 1004019.98,
+    "daily_return_pct": -0.1142413969703826,
+    "weights": {
+      "BTC": 0.0753,
+      "ETH": -0.0749,
+      "CASH": 0.8395,
+      "XRP": 0.0103,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T02:05:00Z",
+    "portfolio_value": 1002525.25,
+    "daily_return_pct": -0.14887478118252861,
+    "weights": {
+      "BTC": 0.0702,
+      "ETH": -0.014,
+      "CASH": 0.8888,
+      "XRP": 0.027,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T03:05:00Z",
+    "portfolio_value": 1002250.95,
+    "daily_return_pct": -0.027361099208211836,
+    "weights": {
+      "BTC": 0.0426,
+      "ETH": 0.0,
+      "CASH": 0.8813,
+      "XRP": 0.0647,
+      "SOL": -0.0114
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T04:05:00Z",
+    "portfolio_value": 1003529.46,
+    "daily_return_pct": 0.1275640854671911,
+    "weights": {
+      "BTC": 0.044,
+      "ETH": 0.0,
+      "CASH": 0.8951,
+      "XRP": 0.02,
+      "SOL": -0.0409
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T05:05:00Z",
+    "portfolio_value": 1002614.26,
+    "daily_return_pct": -0.09119810067953482,
+    "weights": {
+      "BTC": 0.0069,
+      "ETH": -0.097,
+      "CASH": 0.8347,
+      "XRP": 0.0614,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T06:05:00Z",
+    "portfolio_value": 1004618.23,
+    "daily_return_pct": 0.19987402319607828,
+    "weights": {
+      "BTC": 0.0102,
+      "ETH": 0.0,
+      "CASH": 0.9839,
+      "XRP": 0.0059,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T07:05:00Z",
+    "portfolio_value": 1004949.82,
+    "daily_return_pct": 0.03300626346647295,
+    "weights": {
+      "BTC": 0.0101,
+      "ETH": 0.0,
+      "CASH": 0.8978,
+      "XRP": 0.0723,
+      "SOL": -0.0198
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T08:05:00Z",
+    "portfolio_value": 1006583.25,
+    "daily_return_pct": 0.1625381367218237,
+    "weights": {
+      "BTC": 0.0928,
+      "ETH": 0.0,
+      "CASH": 0.7978000000000001,
+      "XRP": 0.0343,
+      "SOL": -0.0751
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T09:05:00Z",
+    "portfolio_value": 1006306.93,
+    "daily_return_pct": -0.02745168820335042,
+    "weights": {
+      "BTC": 0.0344,
+      "ETH": 0.0,
+      "CASH": 0.9539,
+      "XRP": 0.0117,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T10:05:00Z",
+    "portfolio_value": 1005603.34,
+    "daily_return_pct": -0.06991763190176137,
+    "weights": {
+      "BTC": 0.0629,
+      "ETH": -0.0998,
+      "CASH": 0.7943,
+      "XRP": 0.0238,
+      "SOL": -0.0192
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T11:05:00Z",
+    "portfolio_value": 1005141.52,
+    "daily_return_pct": -0.04592493021718935,
+    "weights": {
+      "BTC": 0.0835,
+      "ETH": -0.0993,
+      "CASH": 0.7735,
+      "XRP": 0.0437,
+      "SOL": 0.0
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "SELL",
+      "XRP": "BUY",
+      "SOL": "HOLD"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T12:05:00Z",
+    "portfolio_value": 1006509.61,
+    "daily_return_pct": 0.13610955327787444,
+    "weights": {
+      "BTC": 0.0964,
+      "ETH": 0.0,
+      "CASH": 0.7935,
+      "XRP": 0.0366,
+      "SOL": -0.0735
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T13:05:00Z",
+    "portfolio_value": 1006112.8,
+    "daily_return_pct": -0.03942422273615076,
+    "weights": {
+      "BTC": 0.0585,
+      "ETH": 0.0,
+      "CASH": 0.859,
+      "XRP": 0.0276,
+      "SOL": -0.0549
+    },
+    "actions": {
+      "BTC": "BUY",
+      "ETH": "HOLD",
+      "XRP": "BUY",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  },
+  {
+    "date": "2026-09-08T13:42:18Z",
+    "portfolio_value": 995721.1086349539,
+    "daily_return_pct": -1.0328554974199933,
+    "weights": {
+      "BTC": -0.14874118599642003,
+      "ETH": 0.14489579562371277,
+      "XRP": -0.1505993984656759,
+      "SOL": 0.15059939846567594,
+      "CASH": 0.4051642214485154
+    },
+    "actions": {
+      "BTC": "HOLD",
+      "ETH": "HOLD",
+      "XRP": "SELL",
+      "SOL": "SELL"
+    },
+    "dry_run": true
+  }
+]

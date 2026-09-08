@@ -10,7 +10,7 @@ import time
 
 
 class TokenBucketLimiter:
-    def __init__(self, rate_per_sec: float = 8.0, burst: int = 8) -> None:
+    def __init__(self, rate_per_sec: float = 3.0, burst: int = 3) -> None:
         self._rate = rate_per_sec
         self._capacity = burst
         self._tokens = float(burst)
