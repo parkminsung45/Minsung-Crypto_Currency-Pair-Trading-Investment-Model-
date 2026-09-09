@@ -67,6 +67,8 @@ export function ValueChart({
     onHover(null);
   };
 
+  const gradientId = "value-area-fill";
+
   return (
     <svg
       ref={svgRef}
@@ -76,6 +78,12 @@ export function ValueChart({
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
     >
+      <defs>
+        <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor={colors["--pos"]} stopOpacity={0.32} />
+          <stop offset="100%" stopColor={colors["--pos"]} stopOpacity={0} />
+        </linearGradient>
+      </defs>
       <ChartFrame
         width={WIDTH}
         height={HEIGHT}
@@ -88,10 +96,9 @@ export function ValueChart({
         <>
           <motion.polygon
             points={area}
-            fill={colors["--pos"]}
-            opacity={0.1}
+            fill={`url(#${gradientId})`}
             initial={reduceMotion ? false : { opacity: 0 }}
-            animate={{ opacity: 0.1 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           />
           <motion.polyline
@@ -109,6 +116,7 @@ export function ValueChart({
       )}
       <circle cx={endX} cy={endY} r={6} fill={colors["--surface"]} />
       <circle cx={endX} cy={endY} r={4} fill={colors["--pos"]} />
+      {/* 라인이 급격히 꺾이는 구간에서 라벨과 겹쳐도 읽히도록 surface색 halo(stroke)를 텍스트 뒤에 깐다 */}
       <text
         x={endX - 10}
         y={endY - 12 < M.top + 10 ? endY + 20 : endY - 12}
@@ -116,6 +124,10 @@ export function ValueChart({
         fontSize={12}
         fontWeight={650}
         fill={colors["--text-primary"]}
+        stroke={colors["--surface"]}
+        strokeWidth={4}
+        strokeLinejoin="round"
+        paintOrder="stroke"
       >
         {fmtKrw(last.portfolio_value)}
       </text>

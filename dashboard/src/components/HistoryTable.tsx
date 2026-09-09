@@ -73,7 +73,7 @@ function TableRow({ h }: { h: HistoryRecord }) {
         <td className={`${CELL} w-4 pr-0.5 text-left`} style={{ ...borderStyle, color: "var(--text-muted)" }}>
           {hasReasoning ? (open ? "▾" : "▸") : ""}
         </td>
-        <td className={CELL} style={borderStyle}>
+        <td className={`${CELL} mono`} style={borderStyle}>
           {h.date}
         </td>
         <td className={`${CELL} tabular-nums`} style={borderStyle}>
@@ -133,8 +133,8 @@ export function HistoryTable({ history }: { history: HistoryRecord[] }) {
             {cols.map((c, i) => (
               <th
                 key={i}
-                className={`whitespace-nowrap border-b px-2 py-1.5 font-semibold ${i === 0 ? "text-left" : "text-right"}`}
-                style={{ borderColor: "var(--grid)", color: "var(--text-secondary)" }}
+                className={`mono whitespace-nowrap border-b px-2 py-1.5 font-semibold ${i === 0 ? "text-left" : "text-right"}`}
+                style={{ borderColor: "var(--grid)", background: "var(--surface-2)", color: "var(--text-muted)" }}
               >
                 {c}
               </th>

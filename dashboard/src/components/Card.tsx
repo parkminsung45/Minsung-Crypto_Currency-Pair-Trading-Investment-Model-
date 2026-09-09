@@ -21,7 +21,7 @@ export function Card({ title, desc, extra, children, className = "", delay = 0 }
       initial={reduceMotion ? false : { opacity: 0, y: 14 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay, ease: [0.16, 1, 0.3, 1] }}
-      whileHover={reduceMotion ? undefined : { y: -3 }}
+      whileHover={reduceMotion ? undefined : { y: -3, boxShadow: "var(--shadow-card-hover)" }}
       className={`card-surface rounded-xl border p-4 ${className}`}
       style={{
         background: "var(--surface)",

@@ -1,57 +1,89 @@
 @import "tailwindcss";
 
-/* 팔레트: 원본 vanilla 대시보드와 동일 시스템(라이트/다크 6슬롯) 그대로 이식 */
+/*
+ * 폰트: Inter(본문) + JetBrains Mono(숫자)는 layout.tsx에서 next/font/google로
+ * 셀프호스팅 로드하고 --font-inter / --font-jetbrains-mono 변수로 노출한다
+ * (성능·FOUT 방지를 위해 여기서 별도 @import url(...)은 사용하지 않음).
+ *
+ * 다크 트레이딩 터미널 + 네온 민트 — 리디자인 v2
+ * 기본은 다크([data-theme] 없음). [data-theme="light"]로 명시 전환.
+ * 변수명은 기존 컴포넌트 호환을 위해 유지하되(--page, --text-primary 등),
+ * 값 전체를 새 팔레트로 교체 — 그림자 대신 보더 강조 + 호버 글로우가 핵심.
+ */
 :root {
+  color-scheme: dark;
+
+  /* 표면 */
+  --page: #0a0e14;
+  --surface: #10161f;
+  --surface-2: #141c28;
+  --border: #1e2836;
+
+  /* 텍스트 */
+  --text-primary: #e8ecf1;
+  --text-secondary: #a7b0bd;
+  --text-muted: #6b7685;
+
+  /* 그리드/기준선 (보더에서 파생) */
+  --grid: #1a2430;
+  --baseline: #2a3644;
+
+  /* 델타/차트 액센트 */
+  --up: #00e5a0;
+  --down: #ff4d6d;
+  --pos: #00e5a0;
+  --neg: #ff4d6d;
+  --accent-cyan: #00b8ff;
+
+  /* 코인별 시리즈 색 — 다크 터미널에 어울리는 시안/민트/바이올렛/핑크/그레이 계열 */
+  --s-btc: #00b8ff;
+  --s-eth: #00e5a0;
+  --s-xrp: #9b6bff;
+  --s-sol: #ff5d9e;
+  --s-cash: #3d4a5c;
+
+  /* 보더 강조형 그림자 — 다크에서는 그림자보다 보더 + 은은한 글로우 */
+  --shadow-card: 0 0 0 1px var(--border);
+  --shadow-card-hover: 0 0 0 1px rgba(0, 229, 160, 0.35), 0 8px 24px -8px rgba(0, 229, 160, 0.15);
+  --glow: radial-gradient(circle at 15% 0%, rgba(0, 229, 160, 0.07), transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(0, 184, 255, 0.06), transparent 40%);
+}
+
+/* 라이트 모드 — 명시적 토글([data-theme="light"])로만 진입, 시스템 설정은 무시(기본 다크 고정) */
+:root[data-theme="light"] {
   color-scheme: light;
+
   --page: #f9f9f7;
   --surface: #fcfcfb;
+  --surface-2: #f3f2ee;
+  --border: rgba(11, 11, 11, 0.12);
+
   --text-primary: #0b0b0b;
   --text-secondary: #52514e;
   --text-muted: #898781;
+
   --grid: #e1e0d9;
   --baseline: #c3c2b7;
-  --border: rgba(11, 11, 11, 0.1);
-  --up: #006300; /* 델타 상승(성공 텍스트) */
-  --down: #d03b3b; /* 델타 하락 */
-  --pos: #2a78d6; /* 다이버징 + (blue) */
-  --neg: #e34948; /* 다이버징 - (red) */
-  --s-btc: #eb6834; /* slot 1 orange (BTC 관례색) */
-  --s-eth: #2a78d6; /* slot 2 blue */
-  --s-xrp: #7a5cd6; /* slot 3 purple */
-  --s-sol: #c2276b; /* slot 4 magenta */
-  --s-cash: #008300; /* slot 5 green (KRW 현금) */
 
-  /* 입체감을 위한 다층 그림자 — 라이트 */
-  --shadow-card: 0 1px 2px rgba(11, 11, 11, 0.04), 0 2px 8px rgba(11, 11, 11, 0.04), 0 12px 24px -12px rgba(11, 11, 11, 0.08);
-  --shadow-card-hover: 0 2px 4px rgba(11, 11, 11, 0.05), 0 8px 16px rgba(11, 11, 11, 0.06), 0 24px 40px -16px rgba(11, 11, 11, 0.12);
-  --glow: radial-gradient(circle at 15% 0%, rgba(42, 120, 214, 0.05), transparent 55%);
-}
+  /* 채도를 낮춘 다크 대비 통일감 있는 up/down */
+  --up: #0a8a55;
+  --down: #d0405e;
+  --pos: #0a8a55;
+  --neg: #d0405e;
+  --accent-cyan: #0a84c4;
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --page: #0d0d0d;
-    --surface: #1a1a19;
-    --text-primary: #ffffff;
-    --text-secondary: #c3c2b7;
-    --text-muted: #898781;
-    --grid: #2c2c2a;
-    --baseline: #383835;
-    --border: rgba(255, 255, 255, 0.1);
-    --up: #0ca30c;
-    --down: #e66767;
-    --pos: #3987e5;
-    --neg: #e66767;
-    --s-btc: #d95926;
-    --s-eth: #3987e5;
-    --s-xrp: #9884e0;
-    --s-sol: #e0508f;
-    --s-cash: #008300;
+  --s-btc: #0a84c4;
+  --s-eth: #0a8a55;
+  --s-xrp: #6a3fd6;
+  --s-sol: #c22a72;
+  --s-cash: #767065;
 
-    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.25), 0 12px 24px -12px rgba(0, 0, 0, 0.45);
-    --shadow-card-hover: 0 2px 4px rgba(0, 0, 0, 0.35), 0 8px 20px rgba(0, 0, 0, 0.3), 0 28px 48px -16px rgba(0, 0, 0, 0.55);
-    --glow: radial-gradient(circle at 15% 0%, rgba(57, 135, 229, 0.08), transparent 55%);
-  }
+  /* 라이트에서는 카드 그림자를 명확하게 — 기존 대비 최소 2배 이상 진하게 */
+  --shadow-card: 0 2px 4px rgba(11, 11, 11, 0.09), 0 6px 16px rgba(11, 11, 11, 0.09),
+    0 20px 40px -16px rgba(11, 11, 11, 0.2);
+  --shadow-card-hover: 0 4px 8px rgba(11, 11, 11, 0.12), 0 14px 28px rgba(11, 11, 11, 0.13),
+    0 32px 56px -16px rgba(11, 11, 11, 0.28);
+  --glow: radial-gradient(circle at 15% 0%, rgba(10, 132, 196, 0.06), transparent 55%);
 }
 
 * {
@@ -65,15 +97,52 @@ body {
 }
 
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: var(--font-inter), "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   background-image: var(--glow);
   background-attachment: fixed;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.mono,
+.tabular-nums {
+  font-family: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
 }
 
 svg text {
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--pos) 25%, transparent);
+  background: color-mix(in srgb, var(--up) 25%, transparent);
+}
+
+/* LIVE 상태뱃지 펄스 도트 */
+@keyframes status-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.pulse-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: status-pulse 2s ease-in-out infinite;
+}
+
+.ticker-tape:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-dot {
+    animation: none;
+  }
 }

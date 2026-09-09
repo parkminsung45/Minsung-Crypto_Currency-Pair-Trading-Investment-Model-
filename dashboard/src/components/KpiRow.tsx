@@ -4,14 +4,21 @@ import { KpiTile } from "./KpiTile";
 import { fmtKrw, fmtPct } from "@/lib/chart-utils";
 import type { HistoryRecord } from "@/lib/types";
 
-/** KPI 타일 4개 행 (원본 kpiRow()) */
+/** KPI 티커 테이프 — 하나의 컨테이너를 세로 구분선으로 나눈 가로 연결형 (원본 kpiRow() 재구성) */
 export function KpiRow({ history }: { history: HistoryRecord[] }) {
   const latest = history[history.length - 1];
   const first = history[0];
   const cum = (latest.portfolio_value / first.portfolio_value - 1) * 100;
 
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-3">
+    <div
+      className="ticker-tape flex flex-wrap overflow-hidden rounded-xl border px-5 transition-shadow duration-200"
+      style={{
+        background: "var(--surface)",
+        borderColor: "var(--border)",
+        boxShadow: "var(--shadow-card)",
+      }}
+    >
       <KpiTile
         label="포트폴리오 가치"
         value={fmtKrw(latest.portfolio_value)}

@@ -26,13 +26,13 @@ export function ChartTooltip({ state }: { state: TooltipState | null }) {
             color: "var(--text-primary)",
           }}
         >
-          <div className="mb-1" style={{ color: "var(--text-muted)" }}>
+          <div className="mono mb-1" style={{ color: "var(--text-muted)" }}>
             {state.dateText}
           </div>
           {state.rows.map((r, i) => (
             <div key={i} className="mt-0.5 flex items-center gap-1.5">
               <span className="h-[3px] w-2.5 flex-none rounded-sm" style={{ background: r.color }} />
-              <span className="font-semibold">{r.value}</span>
+              <span className="mono font-semibold">{r.value}</span>
               <span style={{ color: "var(--text-secondary)" }}>{r.name}</span>
             </div>
           ))}
