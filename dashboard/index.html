@@ -97,6 +97,15 @@
   .card h2 { font-size: 14px; font-weight: 650; margin-bottom: 2px; }
   .card .desc { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
   .card.refreshing .plot { opacity: 0.5; }
+  .card-toggle {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    width: 100%; background: none; border: none; padding: 0; margin: 0;
+    font-family: inherit; text-align: left; cursor: pointer;
+  }
+  .card-toggle h2 { margin-bottom: 0; }
+  .card-toggle .chevron { font-size: 12px; color: var(--text-muted); flex: none; }
+  .card-toggle:hover h2 { color: var(--text-secondary); }
+  .card-toggle[aria-expanded="false"] + .desc { margin-bottom: 0; }
   .plot { width: 100%; }
   svg { display: block; width: 100%; height: auto; }
   svg text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
@@ -188,6 +197,7 @@ const RANGES = [
 let fullHistory = null;   // null = 아직 로드 전, [] = 데이터 없음
 let activeRange = "all";
 let loadError = null;
+let historyExpanded = false;   // "전체 기록" 표 펼침 상태 — 재렌더링(60초 자동 새로고침 등) 간 유지
 
 const app = document.getElementById("app");
 const tooltip = document.getElementById("tooltip");
@@ -672,6 +682,24 @@ function card(title, desc, body, extra) {
   return c;
 }
 
+/* 행 수가 많아지는 표 카드용 — 헤더를 클릭하면 접고 펼친다. 상태는
+   historyExpanded에 보관해 60초 자동 새로고침으로 다시 그려져도 유지된다. */
+function collapsibleCard(title, desc, count, body, expanded, onToggle) {
+  const c = el("div", { class: "card" });
+  const header = el("button", { class: "card-toggle", type: "button", "aria-expanded": String(expanded) });
+  header.appendChild(el("h2", { text: title + ` (${count}건)` }));
+  header.appendChild(el("span", { class: "chevron", text: expanded ? "▾" : "▸" }));
+  header.addEventListener("click", onToggle);
+  c.appendChild(header);
+  c.appendChild(el("div", { class: "desc", text: desc }));
+  if (expanded) {
+    const plot = el("div", { class: "plot" });
+    plot.appendChild(body);
+    c.appendChild(plot);
+  }
+  return c;
+}
+
 function render() {
   const badge = document.getElementById("status-badge");
   const updated = document.getElementById("last-updated");
@@ -724,7 +752,12 @@ function render() {
     frag.appendChild(card("포트폴리오 가치 추이", "매 실행 시점의 계좌 평가액 (KRW)", valueChart(history)));
     frag.appendChild(card("일간 수익률", "직전 기록 대비 변화율 — 위 파랑, 아래 빨강", returnsChart(history)));
     frag.appendChild(card("목표 비중 추이", "모델이 산출한 종목별 목표 비중 (100% 스택)", weightsChart(history), weightsLegend()));
-    frag.appendChild(card("전체 기록", "모든 값의 표 형태 원본 (최신순)", el("div", { class: "table-scroll" }, [historyTable(history)])));
+    frag.appendChild(collapsibleCard(
+      "전체 기록", "모든 값의 표 형태 원본 (최신순)", history.length,
+      el("div", { class: "table-scroll" }, [historyTable(history)]),
+      historyExpanded,
+      () => { historyExpanded = !historyExpanded; render(); },
+    ));
   }
   app.replaceChildren(frag);
 }
