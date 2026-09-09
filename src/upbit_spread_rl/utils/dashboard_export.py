@@ -8,6 +8,17 @@
         "weights": {"BTC": float, "ETH": float, "CASH": float},  # 합 1.0
         "actions": {"BTC": "HOLD"|"BUY"|"SELL", ...},
         "dry_run": bool,
+        "reasoning": {                     # 페어별 판단 근거(선택) — dashboard 상세 보기에 노출
+            "BTC/ETH": {
+                "spread_zscore": float,
+                "spread_change": float,
+                "unrealized_pnl_obs": float,
+                "action_probs": {"HOLD": float, "ENTER_LONG": float, "ENTER_SHORT": float, "EXIT": float},
+                "chosen_action": "HOLD"|"ENTER_LONG"|"ENTER_SHORT"|"EXIT",
+                "explanation": str,        # 규칙 기반으로 풀어쓴 자연어 설명
+            },
+            ...
+        },
     }
 """
 from __future__ import annotations
@@ -33,6 +44,7 @@ def append_record(
     weights: dict[str, float],
     actions: dict[str, str] | None = None,
     dry_run: bool = True,
+    reasoning: dict[str, dict] | None = None,
 ) -> list[dict]:
     """새 실행 결과를 history.json에 append하고 저장한다. 같은 date(시각)가 이미 있으면 덮어쓴다."""
     history = load_history()
@@ -43,16 +55,17 @@ def append_record(
         (portfolio_value / prev_value - 1) * 100 if prev_value else None
     )
 
-    history.append(
-        {
-            "date": date,
-            "portfolio_value": portfolio_value,
-            "daily_return_pct": daily_return_pct,
-            "weights": weights,
-            "actions": actions or {},
-            "dry_run": dry_run,
-        }
-    )
+    record = {
+        "date": date,
+        "portfolio_value": portfolio_value,
+        "daily_return_pct": daily_return_pct,
+        "weights": weights,
+        "actions": actions or {},
+        "dry_run": dry_run,
+    }
+    if reasoning:
+        record["reasoning"] = reasoning
+    history.append(record)
     history.sort(key=lambda h: h["date"])
 
     HISTORY_PATH.parent.mkdir(parents=True, exist_ok=True)

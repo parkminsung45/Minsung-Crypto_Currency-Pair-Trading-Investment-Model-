@@ -46,11 +46,13 @@ def main(market_a: str, market_b: str, days: int, timesteps: int) -> None:
     def env_factory():
         return PairSpreadEnv(df)
 
+    tag = f"{market_a}_{market_b}"
     train_ppo(
         env_factory,
         total_timesteps=timesteps,
-        model_out_path=f"models/pair_spread_{market_a}_{market_b}.zip",
+        model_out_path=f"models/pair_spread_{tag}.zip",
         tensorboard_log=None,
+        monitor_log_path=f"logs/train_monitor_{tag}.csv",
     )
 
 

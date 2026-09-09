@@ -14,6 +14,7 @@ def train_ppo(
     total_timesteps: int = 200_000,
     model_out_path: str | Path = "models/ppo_model.zip",
     tensorboard_log: str | Path | None = "logs/tensorboard",
+    monitor_log_path: str | Path | None = None,
     **ppo_kwargs,
 ) -> PPO:
     """
@@ -21,11 +22,15 @@ def train_ppo(
         env_factory: () -> gym.Env 를 반환하는 콜러블 (PairSpreadEnv/QuoteSpreadEnv 인스턴스 생성용).
         total_timesteps: 총 학습 스텝 수.
         model_out_path: 학습 완료 후 저장할 경로.
+        monitor_log_path: 에피소드별 보상을 CSV(monitor.csv 포맷)로 남길 경로.
+            대시보드의 "학습 곡선" 카드가 이 파일을 읽어 reward curve를 그린다.
         ppo_kwargs: PPO 생성자에 전달할 추가 하이퍼파라미터.
     """
+    if monitor_log_path is not None:
+        Path(monitor_log_path).parent.mkdir(parents=True, exist_ok=True)
 
     def _make() -> gym.Env:
-        return Monitor(env_factory())
+        return Monitor(env_factory(), filename=str(monitor_log_path) if monitor_log_path else None)
 
     vec_env = DummyVecEnv([_make])
 

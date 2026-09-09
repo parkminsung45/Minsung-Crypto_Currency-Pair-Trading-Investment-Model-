@@ -1,0 +1,96 @@
+{
+  "BTC/ETH": [
+    {
+      "episode": 1,
+      "reward": 190.118365,
+      "length": 15218
+    },
+    {
+      "episode": 2,
+      "reward": 450.165088,
+      "length": 15218
+    },
+    {
+      "episode": 3,
+      "reward": 545.639962,
+      "length": 15218
+    },
+    {
+      "episode": 4,
+      "reward": 619.631013,
+      "length": 15218
+    },
+    {
+      "episode": 5,
+      "reward": 642.892285,
+      "length": 15218
+    },
+    {
+      "episode": 6,
+      "reward": 659.613306,
+      "length": 15218
+    },
+    {
+      "episode": 7,
+      "reward": 687.478263,
+      "length": 15218
+    },
+    {
+      "episode": 8,
+      "reward": 681.844655,
+      "length": 15218
+    },
+    {
+      "episode": 9,
+      "reward": 697.038566,
+      "length": 15218
+    },
+    {
+      "episode": 10,
+      "reward": 711.827164,
+      "length": 15218
+    },
+    {
+      "episode": 11,
+      "reward": 712.903388,
+      "length": 15218
+    },
+    {
+      "episode": 12,
+      "reward": 726.043254,
+      "length": 15218
+    },
+    {
+      "episode": 13,
+      "reward": 721.245719,
+      "length": 15218
+    }
+  ],
+  "XRP/SOL": [
+    {
+      "episode": 1,
+      "reward": 1255.573434,
+      "length": 39513
+    },
+    {
+      "episode": 2,
+      "reward": 1887.420278,
+      "length": 39513
+    },
+    {
+      "episode": 3,
+      "reward": 2053.271173,
+      "length": 39513
+    },
+    {
+      "episode": 4,
+      "reward": 2079.297668,
+      "length": 39513
+    },
+    {
+      "episode": 5,
+      "reward": 2093.540975,
+      "length": 39513
+    }
+  ]
+}

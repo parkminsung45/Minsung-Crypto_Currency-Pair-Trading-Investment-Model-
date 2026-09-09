@@ -107,6 +107,17 @@
   .card-toggle:hover h2 { color: var(--text-secondary); }
   .card-toggle[aria-expanded="false"] + .desc { margin-bottom: 0; }
   .plot { width: 100%; }
+  .model-info { display: flex; flex-direction: column; gap: 16px; margin-top: 4px; }
+  .model-info-section h3 { font-size: 13px; font-weight: 650; margin-bottom: 4px; }
+  .model-info-section p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
+  .model-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+  .model-info-item { background: var(--page); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; }
+  .model-info-item-title { font-size: 11.5px; font-weight: 650; color: var(--text-secondary); margin-bottom: 4px; }
+  .model-info-item-body { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+  .model-info-caveat {
+    font-size: 12px; color: var(--text-secondary); line-height: 1.6;
+    background: var(--page); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px;
+  }
   svg { display: block; width: 100%; height: auto; }
   svg text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
 
@@ -140,6 +151,19 @@
   td.up { color: var(--up); }
   td.down { color: var(--down); }
   .table-scroll { overflow-x: auto; }
+  td.expand-cell { color: var(--text-muted); width: 16px; padding-right: 2px; }
+  tr.has-reasoning:hover { background: var(--page); }
+  tr.reasoning-row td { padding: 0; border-bottom: 1px solid var(--grid); }
+  .reasoning-detail { padding: 12px 16px; display: flex; flex-direction: column; gap: 14px; white-space: normal; }
+  .reasoning-pair-title { font-size: 12px; font-weight: 650; margin-bottom: 4px; }
+  .reasoning-explain { font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 6px; }
+  .reasoning-stats { display: flex; gap: 12px; font-size: 11.5px; color: var(--text-muted); margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+  .prob-bars { display: flex; flex-direction: column; gap: 4px; max-width: 420px; }
+  .prob-row { display: grid; grid-template-columns: 56px 1fr 34px; align-items: center; gap: 8px; font-size: 11px; color: var(--text-muted); }
+  .prob-track { background: var(--page); border-radius: 4px; height: 6px; overflow: hidden; }
+  .prob-fill { background: var(--baseline); height: 100%; border-radius: 4px; }
+  .prob-fill.chosen { background: var(--pos); }
+  .prob-pct { text-align: right; font-variant-numeric: tabular-nums; }
 
   .empty {
     text-align: center; color: var(--text-secondary); font-size: 14px;
@@ -176,6 +200,7 @@
 "use strict";
 
 const DATA_URL = "https://raw.githubusercontent.com/parkminsung45/Minsung-Crypto_Currency-Pair-Trading-Investment-Model-/main/dashboard/data/history.json";
+const TRAINING_CURVES_URL = "https://raw.githubusercontent.com/parkminsung45/Minsung-Crypto_Currency-Pair-Trading-Investment-Model-/main/dashboard/data/training_curves.json";
 const REFRESH_MS = 60_000;
 
 /* 색은 엔티티를 따른다 — 코인별 고정 슬롯, 필터로 재배색되지 않음 */
@@ -198,6 +223,8 @@ let fullHistory = null;   // null = 아직 로드 전, [] = 데이터 없음
 let activeRange = "all";
 let loadError = null;
 let historyExpanded = false;   // "전체 기록" 표 펼침 상태 — 재렌더링(60초 자동 새로고침 등) 간 유지
+let trainingCurves = null;     // 페어별 학습 곡선(에피소드 보상) — 최초 1회만 로드
+let modelInfoExpanded = false; // "RL 모델" 설명 카드 펼침 상태
 
 const app = document.getElementById("app");
 const tooltip = document.getElementById("tooltip");
@@ -230,6 +257,17 @@ async function fetchHistory() {
   if (!res.ok) throw new Error("HTTP " + res.status);
   const data = await res.json();
   return Array.isArray(data) ? data : [];
+}
+
+async function fetchTrainingCurves() {
+  try {
+    const res = await fetch(TRAINING_CURVES_URL);
+    if (!res.ok) return {};
+    const data = await res.json();
+    return data && typeof data === "object" ? data : {};
+  } catch {
+    return {};   // 학습 곡선은 부가 정보 — 실패해도 나머지 대시보드는 정상 표시
+  }
 }
 
 function sliced() {
@@ -637,18 +675,55 @@ function kpiRow(history) {
 
 /* ---------- 테이블 뷰 (차트의 WCAG 등가물) ---------- */
 
+const ACTION_LABELS_KO = { HOLD: "유지", ENTER_LONG: "롱 진입", ENTER_SHORT: "숏 진입", EXIT: "청산" };
+
+function reasoningDetail(h) {
+  const wrap = el("div", { class: "reasoning-detail" });
+  for (const [pair, r] of Object.entries(h.reasoning)) {
+    const block = el("div", { class: "reasoning-pair" });
+    block.appendChild(el("div", { class: "reasoning-pair-title", text: pair }));
+    block.appendChild(el("div", { class: "reasoning-explain", text: r.explanation }));
+
+    const stats = el("div", { class: "reasoning-stats" });
+    stats.appendChild(el("span", { text: "z-score " + r.spread_zscore.toFixed(2) }));
+    stats.appendChild(el("span", { text: "변화량 " + r.spread_change.toFixed(3) }));
+    stats.appendChild(el("span", { text: "선택: " + (ACTION_LABELS_KO[r.chosen_action] ?? r.chosen_action) }));
+    block.appendChild(stats);
+
+    const bars = el("div", { class: "prob-bars" });
+    const order = ["HOLD", "ENTER_LONG", "ENTER_SHORT", "EXIT"];
+    for (const key of order) {
+      const p = r.action_probs[key] ?? 0;
+      const row = el("div", { class: "prob-row" });
+      row.appendChild(el("span", { class: "prob-label", text: ACTION_LABELS_KO[key] }));
+      const track = el("div", { class: "prob-track" });
+      const fill = el("div", { class: "prob-fill" + (key === r.chosen_action ? " chosen" : "") });
+      fill.style.width = (p * 100).toFixed(1) + "%";
+      track.appendChild(fill);
+      row.appendChild(track);
+      row.appendChild(el("span", { class: "prob-pct", text: (p * 100).toFixed(0) + "%" }));
+      bars.appendChild(row);
+    }
+    block.appendChild(bars);
+    wrap.appendChild(block);
+  }
+  return wrap;
+}
+
 function historyTable(history) {
   const table = el("table");
   const thead = el("thead");
   const headRow = el("tr");
-  const cols = ["날짜", "가치", "일간 수익률", ...SERIES.map(s => s.label), "주문", "모드"];
+  const cols = ["", "날짜", "가치", "일간 수익률", ...SERIES.map(s => s.label), "주문", "모드"];
   for (const c of cols) headRow.appendChild(el("th", { text: c }));
   thead.appendChild(headRow);
   table.appendChild(thead);
 
   const tbody = el("tbody");
   for (const h of [...history].reverse()) {
-    const tr = el("tr");
+    const hasReasoning = h.reasoning && Object.keys(h.reasoning).length > 0;
+    const tr = el("tr", { class: hasReasoning ? "has-reasoning" : "" });
+    tr.appendChild(el("td", { class: "expand-cell", text: hasReasoning ? "▸" : "" }));
     tr.appendChild(el("td", { text: h.date }));
     tr.appendChild(el("td", { text: fmtKrw(h.portfolio_value) }));
     const ret = h.daily_return_pct;
@@ -663,9 +738,136 @@ function historyTable(history) {
     tr.appendChild(el("td", { text: acts.length ? acts.join(", ") : "전체 HOLD" }));
     tr.appendChild(el("td", { text: h.dry_run ? "드라이런" : "실거래" }));
     tbody.appendChild(tr);
+
+    if (hasReasoning) {
+      const detailRow = el("tr", { class: "reasoning-row", hidden: "" });
+      const detailCell = el("td", { colspan: String(cols.length) }, [reasoningDetail(h)]);
+      detailRow.appendChild(detailCell);
+      tbody.appendChild(detailRow);
+
+      tr.style.cursor = "pointer";
+      tr.addEventListener("click", () => {
+        const collapsed = detailRow.hasAttribute("hidden");
+        if (collapsed) detailRow.removeAttribute("hidden"); else detailRow.setAttribute("hidden", "");
+        tr.querySelector(".expand-cell").textContent = collapsed ? "▾" : "▸";
+      });
+    }
   }
   table.appendChild(tbody);
   return table;
+}
+
+/* ---------- RL 모델 설명 + 학습 곡선 ---------- */
+
+const PAIR_COLORS = ["--s-btc", "--s-xrp", "--s-eth", "--s-sol"];
+
+function trainingCurveChart(curves) {
+  const width = 1040, height = 220;
+  const pairNames = Object.keys(curves);
+  const allRewards = pairNames.flatMap(p => curves[p].map(e => e.reward));
+  const maxEp = Math.max(...pairNames.map(p => curves[p].length));
+  if (allRewards.length === 0 || maxEp < 2) return el("div", { class: "empty", text: "학습 곡선 데이터가 없습니다." });
+
+  const lo = Math.min(0, ...allRewards);
+  const hi = Math.max(...allRewards);
+  const pad = (hi - lo) * 0.1 || 1;
+  const y = v => M.top + (height - M.top - M.bottom) * (1 - (v - (lo - pad)) / (hi - lo + pad * 2));
+  const x = i => M.left + (width - M.left - M.right) * (i / (maxEp - 1));
+
+  const ticks = niceTicks(lo - pad, hi + pad).map(v => ({ value: v, y: y(v) }));
+  const xLabels = Array.from({ length: Math.min(maxEp, 6) }, (_, k) => {
+    const ep = Math.round((k / Math.min(maxEp - 1, 5)) * (maxEp - 1));
+    return { x: x(ep), text: "ep " + (ep + 1) };
+  });
+  const svg = chartFrame(width, height, ticks, v => v.toFixed(0), xLabels);
+
+  pairNames.forEach((pair, i) => {
+    const color = cssColor(PAIR_COLORS[i % PAIR_COLORS.length]);
+    const episodes = curves[pair];
+    const pts = episodes.map((e, idx) => `${x(idx)},${y(e.reward)}`).join(" ");
+    svg.appendChild(svgEl("polyline", {
+      points: pts, fill: "none", stroke: color,
+      "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round",
+    }));
+    const last = episodes[episodes.length - 1];
+    const lx = x(episodes.length - 1), ly = y(last.reward);
+    svg.appendChild(svgEl("circle", { cx: lx, cy: ly, r: 3.5, fill: color }));
+  });
+
+  return svg;
+}
+
+function trainingCurveLegend(curves) {
+  const legend = el("div", { class: "legend" });
+  Object.keys(curves).forEach((pair, i) => {
+    const swatch = el("span", { class: "swatch" });
+    swatch.style.background = cssColor(PAIR_COLORS[i % PAIR_COLORS.length]);
+    const episodes = curves[pair];
+    const first = episodes[0].reward, last = episodes[episodes.length - 1].reward;
+    legend.appendChild(el("span", { class: "key" }, [
+      swatch,
+      el("span", { text: `${pair} — 에피소드 보상 ${first.toFixed(0)} → ${last.toFixed(0)}` }),
+    ]));
+  });
+  return legend;
+}
+
+function modelInfoBody(curves) {
+  const wrap = el("div", { class: "model-info" });
+
+  const intro = el("div", { class: "model-info-section" });
+  intro.appendChild(el("p", {
+    text: "각 페어(예: BTC/ETH)마다 독립된 PPO(Proximal Policy Optimization) 정책을 학습해 " +
+      "1시간마다 페이퍼 트레이딩을 실행합니다. 알고리즘: Stable-Baselines3 PPO, MLP 정책망.",
+  }));
+  wrap.appendChild(intro);
+
+  const grid = el("div", { class: "model-info-grid" });
+  const item = (title, body) => el("div", { class: "model-info-item" }, [
+    el("div", { class: "model-info-item-title", text: title }),
+    el("div", { class: "model-info-item-body", text: body }),
+  ]);
+  grid.appendChild(item(
+    "관측(State)",
+    "스프레드 z-score, 스프레드 변화량, 현재 포지션(유지/롱/숏), 미실현손익 근사값, 보유 스텝 수 — 5차원 벡터",
+  ));
+  grid.appendChild(item(
+    "행동(Action)",
+    "4가지 이산 행동 중 하나: 유지(HOLD), 롱 진입(ENTER_LONG), 숏 진입(ENTER_SHORT), 청산(EXIT)",
+  ));
+  grid.appendChild(item(
+    "보상(Reward)",
+    "스텝별 미실현손익 변화분 — 진입·청산 시 수수료(0.05%)를 차감. 포지션을 오래 들고 있어도 " +
+      "보상이 없다가 청산 시 한 번에 정산되는 구조",
+  ));
+  grid.appendChild(item(
+    "학습 데이터",
+    "업비트 1분봉 최근 30일, 스프레드는 240분 롤링 윈도우로 헤지비율(OLS)과 z-score 계산 — " +
+      "한 에피소드가 데이터 전체(약 1.5만~4만 스텝)를 관통",
+  ));
+  wrap.appendChild(grid);
+
+  const caveat = el("div", { class: "model-info-caveat" });
+  caveat.appendChild(el("div", { text:
+    "참고: 이 표는 \"모델이 통계적으로 올바른 평균회귀 판단을 내린다\"는 것을 보증하지 않습니다. " +
+    "실제로 학습 데이터 구간에 따라 모델이 교과서적 평균회귀 방향과 반대로 수렴하는 경우가 " +
+    "관찰되었습니다 — 아래 \"전체 기록\" 표의 각 행을 펼치면 그 시점 판단 근거(z-score, 액션별 확률, " +
+    "교과서적 방향과의 일치 여부)를 그대로 확인할 수 있습니다."
+  }));
+  wrap.appendChild(caveat);
+
+  if (curves && Object.keys(curves).length > 0) {
+    const curveSection = el("div", { class: "model-info-section" });
+    curveSection.appendChild(el("h3", { text: "학습 곡선 (에피소드별 누적 보상)" }));
+    curveSection.appendChild(el("div", { class: "desc", text: "우상향할수록 학습 중 정책이 개선되고 있다는 뜻 — 절대값 자체의 손익 의미보다는 추세를 본다." }));
+    const plot = el("div", { class: "plot" });
+    plot.appendChild(trainingCurveChart(curves));
+    curveSection.appendChild(plot);
+    curveSection.appendChild(trainingCurveLegend(curves));
+    wrap.appendChild(curveSection);
+  }
+
+  return wrap;
 }
 
 /* ---------- 렌더 ---------- */
@@ -687,7 +889,7 @@ function card(title, desc, body, extra) {
 function collapsibleCard(title, desc, count, body, expanded, onToggle) {
   const c = el("div", { class: "card" });
   const header = el("button", { class: "card-toggle", type: "button", "aria-expanded": String(expanded) });
-  header.appendChild(el("h2", { text: title + ` (${count}건)` }));
+  header.appendChild(el("h2", { text: count == null ? title : title + ` (${count}건)` }));
   header.appendChild(el("span", { class: "chevron", text: expanded ? "▾" : "▸" }));
   header.addEventListener("click", onToggle);
   c.appendChild(header);
@@ -753,7 +955,13 @@ function render() {
     frag.appendChild(card("일간 수익률", "직전 기록 대비 변화율 — 위 파랑, 아래 빨강", returnsChart(history)));
     frag.appendChild(card("목표 비중 추이", "모델이 산출한 종목별 목표 비중 (100% 스택)", weightsChart(history), weightsLegend()));
     frag.appendChild(collapsibleCard(
-      "전체 기록", "모든 값의 표 형태 원본 (최신순)", history.length,
+      "RL 모델", "어떤 알고리즘으로, 무엇을 보고 학습하는지", null,
+      modelInfoBody(trainingCurves),
+      modelInfoExpanded,
+      () => { modelInfoExpanded = !modelInfoExpanded; render(); },
+    ));
+    frag.appendChild(collapsibleCard(
+      "전체 기록", "모든 값의 표 형태 원본 (최신순) — 행을 클릭하면 판단 근거를 볼 수 있습니다", history.length,
       el("div", { class: "table-scroll" }, [historyTable(history)]),
       historyExpanded,
       () => { historyExpanded = !historyExpanded; render(); },
@@ -776,6 +984,10 @@ async function refresh() {
   }
 }
 
+(async () => {
+  trainingCurves = await fetchTrainingCurves();   // 자주 안 바뀌므로 최초 1회만
+  render();
+})();
 refresh();
 setInterval(refresh, REFRESH_MS);
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);

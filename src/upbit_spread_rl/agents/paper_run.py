@@ -55,6 +55,69 @@ class PairResult:
     short_weight: float  # 페어 내 총자산 대비 숏 다리 비중(부호 있음)
     action_a: str
     action_b: str
+    reasoning: dict       # 이번 스텝의 판단 근거(z-score, 확률분포, 자연어 설명) — dashboard에 노출
+
+
+ACTION_LABELS = {"HOLD": "유지", "ENTER_LONG": "롱 진입", "ENTER_SHORT": "숏 진입", "EXIT": "청산"}
+
+
+def _action_probs(model: PPO, obs: np.ndarray) -> dict[str, float]:
+    """PPO 정책의 현재 관측에 대한 액션별 확률분포. 신경망 자체는 설명 불가능하지만
+    '모델이 각 선택지를 얼마나 강하게 고려했는지'는 이 분포로 근사해서 보여줄 수 있다."""
+    obs_tensor, _ = model.policy.obs_to_tensor(obs)
+    distribution = model.policy.get_distribution(obs_tensor)
+    probs = distribution.distribution.probs.detach().cpu().numpy()[0]
+    return {Action(i).name: float(p) for i, p in enumerate(probs)}
+
+
+def _explain(
+    action: Action,
+    action_taken: str,
+    zscore: float,
+    position_before: Position,
+    probs: dict[str, float],
+    symbol_a: str,
+    symbol_b: str,
+) -> str:
+    """수치 근거를 자연어 문장으로 풀어쓴다. PPO는 신경망이라 '왜'를 직접 말해주지
+    않으므로, 여기서는 (1) z-score가 실제로 무슨 값이었는지를 있는 그대로 서술하고
+    (2) 모델이 고른 액션이 교과서적 평균회귀 전략과 같은 방향인지 다른 방향인지를
+    솔직하게 표시한다. 학습 데이터에 뚜렷한 평균회귀 신호가 없으면 모델이 그 반대
+    방향으로 수렴하는 경우가 실제로 있었고, 이를 감추지 않고 그대로 드러내는 것이
+    이 설명문의 목적이다."""
+    confidence = probs[action.name]
+    conf_pct = f"{confidence * 100:.0f}%"
+    zdir = "평균보다 높은 쪽" if zscore > 0 else ("평균보다 낮은 쪽" if zscore < 0 else "평균 근처")
+
+    # 교과서적 평균회귀 전략의 기대 방향: z가 낮으면(스프레드 축소) 반등을 기대해 롱,
+    # z가 높으면(스프레드 확대) 되돌림을 기대해 숏. 모델의 실제 선택이 이와 같은
+    # 방향인지 비교해 문장 끝에 덧붙인다.
+    textbook = "롱(스프레드 확대 기대)" if zscore < 0 else "숏(스프레드 축소 기대)" if zscore > 0 else None
+    agrees = (
+        (action == Action.ENTER_LONG and zscore < 0)
+        or (action == Action.ENTER_SHORT and zscore > 0)
+    )
+
+    if action == Action.ENTER_LONG:
+        note = "" if agrees else f" — 교과서적 평균회귀 방향({textbook})과는 반대로 진입"
+        return (
+            f"스프레드 z-score {zscore:+.2f} ({zdir}) — "
+            f"{symbol_a} 매수/{symbol_b} 매도로 롱 진입 (모델 확신도 {conf_pct}){note}."
+        )
+    if action == Action.ENTER_SHORT:
+        note = "" if agrees else f" — 교과서적 평균회귀 방향({textbook})과는 반대로 진입"
+        return (
+            f"스프레드 z-score {zscore:+.2f} ({zdir}) — "
+            f"{symbol_a} 매도/{symbol_b} 매수로 숏 진입 (모델 확신도 {conf_pct}){note}."
+        )
+    if action == Action.EXIT:
+        return (
+            f"스프레드 z-score {zscore:+.2f} ({zdir}) — 포지션 청산 (모델 확신도 {conf_pct})."
+        )
+    # HOLD
+    if position_before == Position.FLAT:
+        return f"스프레드 z-score {zscore:+.2f} ({zdir}) — 진입하지 않고 관망 (모델 확신도 {conf_pct})."
+    return f"스프레드 z-score {zscore:+.2f} ({zdir}) — 기존 포지션 유지 (모델 확신도 {conf_pct})."
 
 
 def _state_path(market_a: str, market_b: str) -> Path:
@@ -152,8 +215,10 @@ async def _run_pair(
         direction = 1 if state["position"] == Position.LONG.value else -1
         obs[3] = direction * (current_spread - state["entry_spread"])
 
-    action_id, _ = model.predict(np.array(obs, dtype=np.float32), deterministic=True)
+    obs_array = np.array(obs, dtype=np.float32)
+    action_id, _ = model.predict(obs_array, deterministic=True)
     action = Action(int(action_id))
+    probs = _action_probs(model, obs_array)
 
     position = Position(state["position"])
     action_taken = "HOLD"
@@ -204,16 +269,28 @@ async def _run_pair(
 
     _save_state(market_a, market_b, state)
 
+    symbol_a, symbol_b = market_a.split("-")[1], market_b.split("-")[1]
+    zscore = float(latest["spread_zscore"])
+    reasoning = {
+        "spread_zscore": zscore,
+        "spread_change": float(latest["spread_change"]),
+        "unrealized_pnl_obs": obs[3],
+        "action_probs": probs,
+        "chosen_action": action.name,
+        "explanation": _explain(action, action_taken, zscore, position, probs, symbol_a, symbol_b),
+    }
+
     return PairResult(
         market_a=market_a,
         market_b=market_b,
-        symbol_a=market_a.split("-")[1],
-        symbol_b=market_b.split("-")[1],
+        symbol_a=symbol_a,
+        symbol_b=symbol_b,
         portfolio_value=mark_to_market,
         long_weight=notional_a / mark_to_market if mark_to_market > 0 else 0.0,
         short_weight=notional_b / mark_to_market if mark_to_market > 0 else 0.0,
         action_a=action_taken,
         action_b=action_taken,
+        reasoning=reasoning,
     )
 
 
@@ -237,6 +314,7 @@ async def run_all(pairs: list[tuple[str, str]] | None = None, dry_run: bool = Tr
     total_value = sum(r.portfolio_value for r in results)
     weights: dict[str, float] = {}
     actions: dict[str, str] = {}
+    reasoning: dict[str, dict] = {}
     total_exposure = 0.0
 
     for r in results:
@@ -245,6 +323,7 @@ async def run_all(pairs: list[tuple[str, str]] | None = None, dry_run: bool = Tr
         weights[r.symbol_b] = weights.get(r.symbol_b, 0.0) + r.short_weight * share
         actions[r.symbol_a] = r.action_a
         actions[r.symbol_b] = r.action_b
+        reasoning[f"{r.symbol_a}/{r.symbol_b}"] = r.reasoning
         total_exposure += (abs(r.long_weight) + abs(r.short_weight)) * share
 
     weights["CASH"] = max(1.0 - total_exposure, 0.0)
@@ -258,6 +337,7 @@ async def run_all(pairs: list[tuple[str, str]] | None = None, dry_run: bool = Tr
         weights=weights,
         actions=actions,
         dry_run=dry_run,
+        reasoning=reasoning,
     )
 
     return {
@@ -294,6 +374,7 @@ async def run_once(
         weights=weights,
         actions={result.symbol_a: result.action_a, result.symbol_b: result.action_b},
         dry_run=dry_run,
+        reasoning={f"{result.symbol_a}/{result.symbol_b}": result.reasoning},
     )
 
     return {
