@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>upbit-spread-rl — 코인 스프레드 RL 포트폴리오</title>
+<title>Reinforced Learning based Crypto Currency Trading</title>
 <style>
   /* 팔레트: Minsung Investment Model 대시보드와 동일 시스템(라이트/다크 6슬롯) */
   :root {
@@ -138,12 +138,13 @@
   }
   .empty code { background: var(--page); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; font-size: 12.5px; }
   footer { color: var(--text-muted); font-size: 12px; margin-top: 8px; line-height: 1.6; }
+  footer .made-by { margin-top: 6px; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <h1>upbit-spread-rl — 코인 스프레드 RL 포트폴리오</h1>
+    <h1>Reinforced Learning based Crypto Currency Trading</h1>
     <div class="sub">
       <span id="status-badge" class="badge">불러오는 중…</span>
       <span id="last-updated"></span>
@@ -157,6 +158,7 @@
     데이터: 저장소의 <code>dashboard/data/history.json</code> —
     백테스트/페이퍼 트레이딩 실행이 갱신하며, push되면 이 페이지가 자동 반영합니다
     (60초마다 재조회, GitHub raw 캐시로 수 분 지연 가능).
+    <div class="made-by">Made by Minsung</div>
   </footer>
 </div>
 <div id="tooltip" class="tooltip"></div>
