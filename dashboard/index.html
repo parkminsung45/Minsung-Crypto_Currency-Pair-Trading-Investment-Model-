@@ -224,7 +224,7 @@ let activeRange = "all";
 let loadError = null;
 let historyExpanded = false;   // "전체 기록" 표 펼침 상태 — 재렌더링(60초 자동 새로고침 등) 간 유지
 let trainingCurves = null;     // 페어별 학습 곡선(에피소드 보상) — 최초 1회만 로드
-let modelInfoExpanded = false; // "RL 모델" 설명 카드 펼침 상태
+let modelInfoExpanded = true; // "RL 모델" 설명 카드 펼침 상태 — 기본으로 펼쳐서 보여줌
 
 const app = document.getElementById("app");
 const tooltip = document.getElementById("tooltip");
