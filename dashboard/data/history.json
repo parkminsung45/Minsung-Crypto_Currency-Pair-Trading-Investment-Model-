@@ -5061,6 +5061,53 @@
     }
   },
   {
+    "date": "2026-09-09T02:15:48Z",
+    "portfolio_value": 995563.813891952,
+    "daily_return_pct": -0.03480132587605489,
+    "weights": {
+      "BTC": -0.15031549026197596,
+      "ETH": 0.1474015154728521,
+      "XRP": 0.1504022513387792,
+      "SOL": -0.1510167855297653,
+      "CASH": 0.4008639573966275
+    },
+    "actions": {
+      "BTC": "HOLD",
+      "ETH": "HOLD",
+      "XRP": "HOLD",
+      "SOL": "HOLD"
+    },
+    "dry_run": true,
+    "reasoning": {
+      "BTC/ETH": {
+        "spread_zscore": -1.826356694354824,
+        "spread_change": -0.03404203030003039,
+        "unrealized_pnl_obs": 8.8865025897678,
+        "action_probs": {
+          "HOLD": 0.9306631088256836,
+          "ENTER_LONG": 0.002863470232114196,
+          "ENTER_SHORT": 0.03995225578546524,
+          "EXIT": 0.026521144434809685
+        },
+        "chosen_action": "HOLD",
+        "explanation": "스프레드 z-score -1.83 (평균보다 낮은 쪽) — 기존 포지션 유지 (모델 확신도 93%)."
+      },
+      "XRP/SOL": {
+        "spread_zscore": 0.35286221202679285,
+        "spread_change": -0.03455276353717007,
+        "unrealized_pnl_obs": 5.6477085357747825,
+        "action_probs": {
+          "HOLD": 0.42085000872612,
+          "ENTER_LONG": 0.014825951308012009,
+          "ENTER_SHORT": 0.27821990847587585,
+          "EXIT": 0.28610411286354065
+        },
+        "chosen_action": "HOLD",
+        "explanation": "스프레드 z-score +0.35 (평균보다 높은 쪽) — 기존 포지션 유지 (모델 확신도 42%)."
+      }
+    }
+  },
+  {
     "date": "2026-09-09T02:19:28Z",
     "portfolio_value": 995790.4255380001,
     "daily_return_pct": -0.012047105701562533,

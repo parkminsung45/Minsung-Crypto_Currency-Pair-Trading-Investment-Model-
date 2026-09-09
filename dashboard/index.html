@@ -837,26 +837,31 @@ function modelInfoBody(curves) {
   ));
   grid.appendChild(item(
     "보상(Reward)",
-    "스텝별 미실현손익 변화분 — 진입·청산 시 수수료(0.05%)를 차감. 포지션을 오래 들고 있어도 " +
-      "보상이 없다가 청산 시 한 번에 정산되는 구조",
+    "스텝별 미실현손익 변화분(delta) — 진입·청산 시 수수료(0.05%)를 차감. 포지션 진입 후 " +
+      "최소 120분은 청산 신호를 무시하고, 최대 240분이 지나면 강제 청산 — 진단 결과 평균회귀 " +
+      "신호가 60분 이내엔 거의 없고 120~480분에 강해지는 것을 반영",
   ));
   grid.appendChild(item(
     "학습 데이터",
-    "업비트 1분봉 최근 30일, 스프레드는 240분 롤링 윈도우로 헤지비율(OLS)과 z-score 계산 — " +
-      "한 에피소드가 데이터 전체(약 1.5만~4만 스텝)를 관통",
+    "업비트 1분봉 최근 180일, 스프레드는 240분 롤링 윈도우로 헤지비율(OLS)과 z-score 계산 — " +
+      "한 에피소드가 데이터 전체(약 25만 스텝)를 관통",
   ));
   wrap.appendChild(grid);
 
   const caveat = el("div", { class: "model-info-caveat" });
   caveat.appendChild(el("div", { text:
-    "참고: 이 표는 \"모델이 통계적으로 올바른 평균회귀 판단을 내린다\"는 것을 보증하지 않습니다. " +
-    "실제로 학습 데이터 구간에 따라 모델이 교과서적 평균회귀 방향과 반대로 수렴하는 경우가 " +
-    "관찰되었습니다 — 아래 \"전체 기록\" 표의 각 행을 펼치면 그 시점 판단 근거(z-score, 액션별 확률, " +
-    "교과서적 방향과의 일치 여부)를 그대로 확인할 수 있습니다."
+    "참고: 처음 30일 데이터로 학습했을 때는 모델이 z-score와 반대 방향(평균회귀가 아닌 " +
+    "역방향)으로 수렴하는 문제가 실제로 있었습니다. 진단해보니 진입 임계치(|z|>2) 근처, " +
+    "60분 이내에는 평균회귀 신호가 거의 없고(상관관계 ≈ 0) 120~480분 구간에서만 뚜렷하게 " +
+    "나타났습니다(상관관계 최대 -0.40) — 즉 데이터 부족이 아니라 진입/보유 시점이 신호와 " +
+    "어긋난 것이었습니다. 180일 데이터 + 최소/최대 보유시간 제약으로 재학습한 결과 방향성은 " +
+    "바로잡혔습니다. 아래 \"전체 기록\" 표의 각 행을 펼치면 그 시점 판단 근거(z-score, 액션별 " +
+    "확률, 교과서적 방향과의 일치 여부)를 그대로 확인할 수 있습니다."
   }));
   wrap.appendChild(caveat);
 
-  if (curves && Object.keys(curves).length > 0) {
+  const maxEpisodes = curves ? Math.max(0, ...Object.values(curves).map(e => e.length)) : 0;
+  if (curves && Object.keys(curves).length > 0 && maxEpisodes >= 2) {
     const curveSection = el("div", { class: "model-info-section" });
     curveSection.appendChild(el("h3", { text: "학습 곡선 (에피소드별 누적 보상)" }));
     curveSection.appendChild(el("div", { class: "desc", text: "우상향할수록 학습 중 정책이 개선되고 있다는 뜻 — 절대값 자체의 손익 의미보다는 추세를 본다." }));
