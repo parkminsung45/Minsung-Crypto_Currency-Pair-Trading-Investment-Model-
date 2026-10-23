@@ -16386,5 +16386,52 @@
         "explanation": "스프레드 z-score +0.55 (평균보다 높은 쪽) — 기존 포지션 유지 (모델 확신도 44%)."
       }
     }
+  },
+  {
+    "date": "2026-10-23T10:47:27Z",
+    "portfolio_value": 988454.1151483287,
+    "daily_return_pct": 0.00038681448979449584,
+    "weights": {
+      "BTC": 0.15673338241803247,
+      "ETH": -0.14459851118692194,
+      "XRP": 0.12304525402777558,
+      "SOL": -0.12399994851401368,
+      "CASH": 0.4516229038532563
+    },
+    "actions": {
+      "BTC": "HOLD",
+      "ETH": "HOLD",
+      "XRP": "HOLD",
+      "SOL": "HOLD"
+    },
+    "dry_run": true,
+    "reasoning": {
+      "BTC/ETH": {
+        "spread_zscore": 1.698808289924875,
+        "spread_change": 0.0245867278852554,
+        "unrealized_pnl_obs": 0.7398364833392019,
+        "action_probs": {
+          "HOLD": 0.3039490878582001,
+          "ENTER_LONG": 0.001907503348775208,
+          "ENTER_SHORT": 0.5870659947395325,
+          "EXIT": 0.10707741975784302
+        },
+        "chosen_action": "ENTER_SHORT",
+        "explanation": "스프레드 z-score +1.70 (평균보다 높은 쪽) — BTC 매도/ETH 매수로 숏 진입 (모델 확신도 59%)."
+      },
+      "XRP/SOL": {
+        "spread_zscore": -0.30534697994938764,
+        "spread_change": 0.027323786643881576,
+        "unrealized_pnl_obs": 14.993377450145793,
+        "action_probs": {
+          "HOLD": 0.4101286828517914,
+          "ENTER_LONG": 0.09521880000829697,
+          "ENTER_SHORT": 0.3760235905647278,
+          "EXIT": 0.11862887442111969
+        },
+        "chosen_action": "HOLD",
+        "explanation": "스프레드 z-score -0.31 (평균보다 낮은 쪽) — 기존 포지션 유지 (모델 확신도 41%)."
+      }
+    }
   }
 ]
