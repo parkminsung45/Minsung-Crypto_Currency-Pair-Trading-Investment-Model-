@@ -16574,5 +16574,52 @@
         "explanation": "스프레드 z-score -1.08 (평균보다 낮은 쪽) — XRP 매도/SOL 매수로 숏 진입 (모델 확신도 38%) — 교과서적 평균회귀 방향(롱(스프레드 확대 기대))과는 반대로 진입."
       }
     }
+  },
+  {
+    "date": "2026-10-24T01:17:18Z",
+    "portfolio_value": 986968.3418319979,
+    "daily_return_pct": -0.07508087107291894,
+    "weights": {
+      "BTC": 0.15608283657532693,
+      "ETH": -0.144499600947552,
+      "XRP": 0.1211335399564998,
+      "SOL": -0.12302515935931156,
+      "CASH": 0.4552588631613097
+    },
+    "actions": {
+      "BTC": "HOLD",
+      "ETH": "HOLD",
+      "XRP": "HOLD",
+      "SOL": "HOLD"
+    },
+    "dry_run": true,
+    "reasoning": {
+      "BTC/ETH": {
+        "spread_zscore": -0.25166417628409943,
+        "spread_change": 0.0061680621648338985,
+        "unrealized_pnl_obs": -0.48673648881263176,
+        "action_probs": {
+          "HOLD": 0.012671860866248608,
+          "ENTER_LONG": 0.45430558919906616,
+          "ENTER_SHORT": 0.3460233509540558,
+          "EXIT": 0.18699918687343597
+        },
+        "chosen_action": "ENTER_LONG",
+        "explanation": "스프레드 z-score -0.25 (평균보다 낮은 쪽) — BTC 매수/ETH 매도로 롱 진입 (모델 확신도 45%)."
+      },
+      "XRP/SOL": {
+        "spread_zscore": -1.5341421522718948,
+        "spread_change": -0.04671620389000708,
+        "unrealized_pnl_obs": 15.576237703337801,
+        "action_probs": {
+          "HOLD": 0.34308090806007385,
+          "ENTER_LONG": 0.16232168674468994,
+          "ENTER_SHORT": 0.41063055396080017,
+          "EXIT": 0.08396690338850021
+        },
+        "chosen_action": "ENTER_SHORT",
+        "explanation": "스프레드 z-score -1.53 (평균보다 낮은 쪽) — XRP 매도/SOL 매수로 숏 진입 (모델 확신도 41%) — 교과서적 평균회귀 방향(롱(스프레드 확대 기대))과는 반대로 진입."
+      }
+    }
   }
 ]
