@@ -1,9 +1,9 @@
 {
-  "cash_krw": 470176.4174081269,
-  "position": 1,
-  "entry_spread": -2.849622686075267,
+  "cash_krw": 469334.4649886193,
+  "position": 0,
+  "entry_spread": 0.0,
   "entry_price_a": 1269.0,
   "entry_price_b": 95750.0,
-  "coin_a_qty": 111.18617320612896,
-  "coin_b_qty": -1.4735796741365812
+  "coin_a_qty": 0.0,
+  "coin_b_qty": 0.0
 }
